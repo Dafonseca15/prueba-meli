@@ -1,0 +1,36 @@
+// Colores base para la aplicación (ej. inspirados en MercadoLibre)
+$color-primary: #3483fa; // Azul de MercadoLibre
+$color-secondary: #ffe600; // Amarillo de MercadoLibre
+$color-text-dark: #333333;
+$color-text-light: #666666;
+$color-background-light: #eeeeee; // Fondo gris claro
+$color-white: #ffffff;
+$color-success: #00a650; // Verde para "stock disponible"
+$color-error: #cc0000; // Rojo para errores
+
+// Tamaños de fuente
+$font-size-xxs: 12px;
+$font-size-xs: 14px;
+$font-size-s: 16px;
+$font-size-m: 18px;
+$font-size-l: 24px;
+$font-size-xl: 32px;
+$font-size-xxl: 48px;
+
+// Espaciado (basado en una escala consistente)
+$spacing-xxs: 4px;
+$spacing-xs: 8px;
+$spacing-s: 12px;
+$spacing-m: 16px;
+$spacing-l: 24px;
+$spacing-xl: 32px;
+$spacing-xxl: 48px;
+
+// Sombras
+$shadow-default: 0 1px 2px rgba(0, 0, 0, 0.1);
+$shadow-card: 0 1px 4px rgba(0, 0, 0, 0.1);
+
+// Border Radius
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
