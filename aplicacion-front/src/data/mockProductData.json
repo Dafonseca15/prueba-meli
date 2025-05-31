@@ -2,24 +2,28 @@
 {
     "id": "MLA123456789",
     "title": "Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM",
+    "condition": "Nuevo",
+    "sold_quantity": 10500,
     "price": {
       "currency": "USD",
       "amount": 439,
       "decimals": 0,
+      "original_amount": 491,
       "installments": {
         "quantity": 10,
-        "amount": 19.16
+        "amount": 1.914,
+        "rate": 0,
+        "text": "en 3 cuotas de $546.667 sin interés"
       }
     },
-    "condition": "Nuevo",
     "stock": 50,
     "pictures": [
-      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp"
+      "https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_621964-MLA81364948571_122024-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_777643-MLA75395342152_042024-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_725539-MLA80825742603_112024-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_832248-MLA81366749957_122024-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_780712-MLA81099188364_122024-F.webp"
     ],
     "description": "El Samsung Galaxy A55 5G es un smartphone de alta gama con una impresionante pantalla Super AMOLED de 6.6 pulgadas, procesador Exynos 1480, 8 GB de RAM y 256 GB de almacenamiento. Captura fotos y videos asombrosos con su sistema de cámara triple, incluyendo un lente principal de 50 MP con OIS, ultra gran angular de 12 MP y macro de 5 MP. Su batería de 5000 mAh te acompaña durante todo el día, y cuenta con certificación IP67 para resistencia al agua y al polvo.",
     "seller_info": {
@@ -30,7 +34,8 @@
     },
     "shipping": {
       "free_shipping": true,
-      "logistic_type": "FULFILLMENT"
+      "logistic_type": "FULFILLMENT",
+      "delivery_time_text": "Conoce los tiempos y las formas de envío. Calcular cuándo llega"
     },
     "highlights": [
       "Memoria RAM: 8 GB",
@@ -38,5 +43,29 @@
       "Cámara potente para fotos y videos de alta calidad",
       "Batería de larga duración",
       "Resistencia al agua y al polvo (IP67)"
+    ],
+    "product_features": [ 
+      {
+        "type": "return",
+        "text": "Devolución gratis. Tienes 30 días desde que lo recibes.",
+        "icon": "🔄"
+      },
+      {
+        "type": "protected_purchase",
+        "text": "Compra Protegida, recibe el producto que esperabas o te devolvemos tu dinero.",
+        "icon": "🛡️"
+      },
+      {
+        "type": "warranty",
+        "text": "1 años de garantía de fábrica.",
+        "icon": "⚙️"
+      }
+    ],
+    "color_options": [
+      {
+        "name": "Azul oscuro",
+        "hex": "#202C5E",
+        "picture": "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp"
+      }
     ]
   }
