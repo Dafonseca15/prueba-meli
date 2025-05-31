@@ -1,0 +1,42 @@
+
+{
+    "id": "MLA123456789",
+    "title": "Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM",
+    "price": {
+      "currency": "USD",
+      "amount": 439,
+      "decimals": 0,
+      "installments": {
+        "quantity": 10,
+        "amount": 19.16
+      }
+    },
+    "condition": "Nuevo",
+    "stock": 50,
+    "pictures": [
+      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp"
+    ],
+    "description": "El Samsung Galaxy A55 5G es un smartphone de alta gama con una impresionante pantalla Super AMOLED de 6.6 pulgadas, procesador Exynos 1480, 8 GB de RAM y 256 GB de almacenamiento. Captura fotos y videos asombrosos con su sistema de cámara triple, incluyendo un lente principal de 50 MP con OIS, ultra gran angular de 12 MP y macro de 5 MP. Su batería de 5000 mAh te acompaña durante todo el día, y cuenta con certificación IP67 para resistencia al agua y al polvo.",
+    "seller_info": {
+      "id": "SELLER123",
+      "nickname": "Tienda Oficial Samsung",
+      "reputation_level": "gold",
+      "sales_completed": 15000
+    },
+    "shipping": {
+      "free_shipping": true,
+      "logistic_type": "FULFILLMENT"
+    },
+    "highlights": [
+      "Memoria RAM: 8 GB",
+      "Diseño elegante y duradero",
+      "Cámara potente para fotos y videos de alta calidad",
+      "Batería de larga duración",
+      "Resistencia al agua y al polvo (IP67)"
+    ]
+  }
