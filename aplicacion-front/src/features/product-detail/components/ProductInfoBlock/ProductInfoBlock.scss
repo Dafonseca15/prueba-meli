@@ -1,0 +1,19 @@
+.product-info-section {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .product-info-section {
+        grid-template-columns: 1;
+        gap: 20px;
+    }
+}
