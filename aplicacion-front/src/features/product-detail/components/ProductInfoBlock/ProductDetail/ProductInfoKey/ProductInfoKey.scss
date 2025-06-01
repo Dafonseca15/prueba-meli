@@ -1,0 +1,103 @@
+.product-info-key {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee; // Un borde superior sutil
+    font-family: Arial, sans-serif;
+    color: #333; // Color de texto principal
+  
+    &__title {
+      font-size: 14px;
+      font-weight: bold; // Normal, no tan negrita como un h2
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: #333;
+    }
+  
+    &__list {
+      list-style: none; // Quita los puntos de lista por defecto
+      padding: 0;
+      margin: 0;
+      font-size: 14px; // Tamaño de fuente para la lista de características
+      margin-bottom: 15px; // Espacio entre la lista y el enlace "Ver características"
+    }
+  
+    &__item {
+      font-size: 14px;
+      line-height: 1.5; // Espaciado entre líneas
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 15px; // Espacio para el guion personalizado
+  
+      &::before {
+        content: '•'; // Usar un guion (bullet point) personalizado
+        color: black; // Color gris para el bullet
+        position: absolute;
+        left: 0;
+        top: 0;
+        font-size: 1.2em; // Tamaño del bullet
+        line-height: 1.5; // Ajusta el line-height para que el bullet esté alineado
+      }
+    }
+  
+    &__characteristics-link {
+      font-size: 0.85em;
+      color: #3483fa; // Azul de enlace de MercadoLibre
+      text-decoration: none;
+      display: inline-block; // Para que margin-top y margin-bottom funcionen
+      margin-bottom: 25px; // Espacio entre este enlace y las opciones de compra
+  
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  
+    &__buying-options {
+      margin-top: 20px;
+    }
+  
+    &__buying-options-label {
+      font-size: 1em;
+      color: #333;
+      margin-bottom: 8px;
+      font-weight: normal;
+    }
+  
+    &__buying-options-link {
+      font-size: 0.9em;
+      color: #3483fa; // Azul de enlace
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  
+    // Media queries para responsividad
+    @media (max-width: 768px) {
+      margin-top: 15px;
+      padding-top: 15px;
+  
+      &__title {
+        font-size: 1em;
+        margin-bottom: 10px;
+      }
+  
+      &__feature-item {
+        font-size: 0.85em;
+        margin-bottom: 6px;
+      }
+  
+      &__characteristics-link {
+        font-size: 0.8em;
+        margin-bottom: 20px;
+      }
+  
+      &__buying-options-label {
+        font-size: 0.9em;
+      }
+  
+      &__buying-options-link {
+        font-size: 0.85em;
+      }
+    }
+  }

@@ -3,17 +3,22 @@ export interface Product {
     title: string;
     condition: string;
     sold_quantity: number;
-    price: {
+    purchase: {
         currency: string;
         amount: number;
         decimals: number;
         original_amount?: number;
+        discount_percentage?: number;
         installments?: {
             quantity: number;
             amount: number;
             rate?: number;
             text?: string;
         };
+        promotion: {
+            discount: number;
+            tc_agreement: string;
+        }
     };
     stock: number;
     pictures: string[];
@@ -60,6 +65,54 @@ export interface Product {
         average: number;
         total_reviews: number;
     };
+    color_selector?: [
+        {
+            name: string;
+            thumbnailUrl?: string;
+            value?: string;
+            selected?: boolean;
+        }
+    ],
+    keyInfo?: {
+        title: string;
+        items: string[];
+    };
+}
+
+export interface keyInfoProps {
+    keyInfo: {
+        title: string;
+        items: string[];
+    };
+}
+
+export interface ColorsSelectorProps {
+    color_selector: Array<{
+        name: string;
+        thumbnailUrl?: string;
+        value?: string;
+        selected?: boolean;
+    }>;
+}
+
+export interface ProductDetailProps {
+    purchase: {
+        currency: string;
+        amount: number;
+        decimals: number;
+        original_amount?: number;
+        discount_percentage?: number;
+        installments?: {
+            quantity: number;
+            amount: number;
+            rate?: number;
+            text?: string;
+        };
+        promotion: {
+            discount: number;
+            tc_agreement: string;
+        }
+    }
 }
 
 export interface RatingProps {

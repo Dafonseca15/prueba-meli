@@ -1,0 +1,100 @@
+.product-purchase-details {
+    margin-top: 20px; // Espacio superior
+    padding-bottom: 20px;
+    font-family: Arial, sans-serif;
+  
+    &__original-price {
+      font-size: 0.9em;
+      color: #777; // Gris para el precio tachado
+      text-decoration: line-through; // Tachado
+      margin: 0; // Eliminar márgenes por defecto del párrafo
+    }
+  
+    &__current-price-row {
+      display: flex;
+      align-items: center; 
+      gap: 10px; // Espacio entre el precio y el % OFF
+    }
+  
+    &__current-price {
+      font-size: 2.2em; // Tamaño grande para el precio actual
+      font-weight: 300; // Un peso de fuente más ligero (light)
+      color: #333; // Color oscuro para el precio
+      margin: 0; // Eliminar márgenes por defecto del h2
+    }
+  
+    &__discount-percentage {
+      font-size: 1.1em; // Tamaño para el "21% OFF"
+      color: #00a650; // Verde para el descuento (color de ML)
+      font-weight: 400;
+    }
+  
+    &__installments {
+      font-size: 0.9em;
+      color: #00a650; // Verde para las cuotas sin interés
+      margin: 0;
+      margin-bottom: 5px; // Espacio debajo de las cuotas
+    }
+  
+    &__installments-amount {
+      font-weight: bold; // Monto de la cuota en negrita
+    }
+
+    &__percentage {
+        font-weight: bold; // Monto de la cuota en negrita
+    }
+  
+    &__tc-agreement {
+        font-size: 0.85em;
+        color: #666; // Gris para el texto de términos y condiciones
+        margin-bottom: 5px;
+
+        &__text {
+            display: inline; // Mostrar en línea para que no ocupe toda la línea
+            margin-right: 5px; // Espacio entre el texto y el enlace
+            padding: 6px;
+            border-radius: 4px;
+            background-color: #4189E633;
+            color: #3483fa;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+    }
+
+
+    &__payment-methods-link {
+      font-size: 0.85em;
+      color: #3483fa; // Azul de enlace de MercadoLibre
+      text-decoration: none; // Sin subrayado por defecto
+      
+      &:hover {
+        text-decoration: underline; // Subrayado al pasar el mouse
+      }
+    }
+  
+    // Media queries para responsividad
+    @media (max-width: 768px) {
+      margin-top: 15px;
+      padding-bottom: 15px;
+  
+      &__original-price {
+        font-size: 0.85em;
+      }
+  
+      &__current-price {
+        font-size: 1.8em;
+      }
+  
+      &__discount-percentage {
+        font-size: 1em;
+      }
+  
+      &__installments {
+        font-size: 0.85em;
+      }
+  
+      &__payment-methods-link {
+        font-size: 0.8em;
+      }
+    }
+  }

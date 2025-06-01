@@ -4,16 +4,21 @@
     "title": "Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM",
     "condition": "Nuevo",
     "sold_quantity": 550,
-    "price": {
+    "purchase": {
       "currency": "USD",
       "amount": 439,
       "decimals": 0,
       "original_amount": 491,
+      "discount_percentage": 12,
       "installments": {
         "quantity": 10,
         "amount": 1.914,
         "rate": 0,
         "text": "en 3 cuotas de $546.667 sin interés"
+      },
+      "promotion":{
+        "discount": 10,
+        "tc_agreement": "OCA Blue VISA"
       }
     },
     "stock": 50,
@@ -157,12 +162,37 @@
     },
     "badge_info": {
       "text": "Más vendido",
-      "category_position": "15",
+      "category_position": "15º",
       "category_text": "en Celulares y Smartphones Motorola",
       "category_url": "/celulares-y-smartphones"
     },
     "rating": {
       "average": 4.8,
       "total_reviews": 1200
+    },
+    "color_selector": [
+    {
+      "name": "Blanco/Negro",
+      "thumbnailUrl": "https://http2.mlstatic.com/D_Q_NP_777643-MLA75395342152_042024-R.webp",
+      "value": "blanco-negro",
+      "selected": true
+    },
+    {
+        "name": "Blanco",
+        "thumbnailUrl": "https://http2.mlstatic.com/D_Q_NP_726160-MLA75549316245_042024-R.webp",
+        "value": "verde",
+        "selected": false
+    }
+    ],
+    "keyInfo": {
+      "title": "Lo que tienes que saber de este producto",
+      "items": [
+        "Memoria RAM: 8 GB",
+        "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida.",
+        "Memoria interna de 256 GB.",
+        "Memoria RAM: 8 GB",
+        "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida.",
+        "Memoria interna de 256 GB."
+      ]
     }
   }
