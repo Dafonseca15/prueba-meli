@@ -32,8 +32,10 @@
         flex-grow: 1;
         display: flex;
         align-items: center;
+        justify-content: center;
+        margin: 0 24px;
         img {
-            width: 80%;
+            width: 100%;
             height: auto;
             max-height: 500px;
             object-fit: contain;

@@ -16,7 +16,7 @@ export const ProductDetail: React.FC<ProductInfoBlockProps> = ( { product} ) => 
 
     return (
         <div className="product-info">
-            <CustomTitle children={product.title} level="h1" size="2xl" bold="bold" marginBottom="0.5rem" />
+            <CustomTitle children={product.title} level="h3" size="2xl" bold="bold" marginBottom="0.5rem" />
         </div>
     )
 }

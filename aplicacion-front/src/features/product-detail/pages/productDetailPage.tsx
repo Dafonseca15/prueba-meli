@@ -2,6 +2,9 @@ import { useParams } from "react-router-dom";
 import { useProductDetails } from "../hooks/useProductDetail";
 import '../assets/styles/ProductDetailPage.scss';
 import { ProductInfoBlock } from "../components/ProductInfoBlock/ProductInfoBlock";
+import { ProductInterestRow } from "../../../components/ProductInterestRow/ProductInterestRow";
+import { Breadcrumbs } from "../../../components/Breadcrumbs/Breadcrumbs";
+import { SellShareActions } from "../../../components/sellShareActions/sellShareActions";
 
 
 export const ProductDetailPage = () => {
@@ -19,9 +22,24 @@ export const ProductDetailPage = () => {
         return <div>Producto no encontrado.</div>;
     }
 
+    // console.log("ProductDetailPage - product:", product);
+    
     return (
         <div className="product-detail-page">
-            <div className="product-content-wapper">
+            {/* 1. Fila - Tambien te puede interesar */}
+            { product.interest && product.interest.items.length > 0 &&
+                <ProductInterestRow title={product.interest?.title} items={product.interest?.items} />
+            }
+            {/* 2. Contenedor para Breadcumbs y Actions */}
+            <div className="product-breadcrumbs-actions-wrapper">
+                { product?.breadcrumbs && product?.breadcrumbs.items?.length > 0 &&
+                    <Breadcrumbs items={product.breadcrumbs.items} />
+                }
+                {/* Acciones de venta y compartición */}
+                <SellShareActions />
+            </div>
+            {/*3. Contenido principal del producto  */}
+            <div className="product-content-wrapper">
                 <ProductInfoBlock product={product} />
             </div>
         </div>
