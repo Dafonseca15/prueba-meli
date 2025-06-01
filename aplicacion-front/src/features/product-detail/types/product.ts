@@ -40,4 +40,35 @@ export interface Product {
         hex?: string;
         picture?: string;
     }>;
+    interest?: {
+        title: string;
+        items: Array<{
+            text: string;
+            url: string;
+        }>;
+    };
+    breadcrumbs?: BreadCrumbsProps;
+    want_to_buy?: want_to_buy;
+    share?: share;
+}
+
+export interface BreadCrumbsProps {
+    items: Array<{
+        text: string;
+        url: string;
+    }>;
+}
+
+export interface want_to_buy {
+    text: string;
+    url: string;
+}
+
+export interface share {
+    title: string;
+    options: Array<{
+        name: string;
+        icon: string;
+        url: string;
+    }>;
 }

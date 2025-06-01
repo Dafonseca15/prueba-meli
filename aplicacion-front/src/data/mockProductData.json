@@ -23,7 +23,9 @@
       "https://http2.mlstatic.com/D_NQ_NP_2X_777643-MLA75395342152_042024-F.webp",
       "https://http2.mlstatic.com/D_NQ_NP_2X_725539-MLA80825742603_112024-F.webp",
       "https://http2.mlstatic.com/D_NQ_NP_2X_832248-MLA81366749957_122024-F.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_780712-MLA81099188364_122024-F.webp"
+      "https://http2.mlstatic.com/D_NQ_NP_2X_780712-MLA81099188364_122024-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_818960-MLA81099131368_122024-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_868167-MLA81099064398_122024-F.webp"
     ],
     "description": "El Samsung Galaxy A55 5G es un smartphone de alta gama con una impresionante pantalla Super AMOLED de 6.6 pulgadas, procesador Exynos 1480, 8 GB de RAM y 256 GB de almacenamiento. Captura fotos y videos asombrosos con su sistema de cámara triple, incluyendo un lente principal de 50 MP con OIS, ultra gran angular de 12 MP y macro de 5 MP. Su batería de 5000 mAh te acompaña durante todo el día, y cuenta con certificación IP67 para resistencia al agua y al polvo.",
     "seller_info": {
@@ -67,5 +69,82 @@
         "hex": "#202C5E",
         "picture": "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp"
       }
-    ]
+    ],
+    "interest": {
+      "title": "Tambien puede interesarte:",
+      "items": [
+        {
+          "text": "funda samsung galaxy a55",
+          "url": "/funda-samsung-galaxy-a55"
+        },
+        {
+          "text": "samsung galaxy",
+          "url": "/samsung-galaxy"
+        },
+        {
+          "text": "celulares",
+          "url": "/celulares"
+        },
+        {
+          "text": "samsung a54",
+          "url": "/samsung-a54"
+        },
+        {
+          "text": "celulares libres",
+          "url": "/celulares-libres"
+        },
+        {
+          "text": "samsung",
+          "url": "/samsung"
+        },
+        {
+          "text": "samsung galaxy a54",
+          "url": "/samsung-galaxy-a54"
+        }
+      ]
+    },
+    "breadcrumbs": {
+      "items": [
+        {
+          "text": "Volver",
+          "url": "/anteirior"
+        },
+        {
+          "text": "Celulares y Telefonia",
+          "url": "/celulares-y-telefonia"
+        },
+        {
+          "text": "Celulares y Smartphones",
+          "url": "/celulares-y-smartphones"
+        },
+        {
+          "text": "Samsung Galaxy",
+          "url": "/celulares-sa"
+        }
+      ]
+    },
+    "want_to_buy": {
+      "text": "Vender uno igual",
+      "url": "/vender-uno-igual"
+    },
+    "share": {
+      "title": "Compartir",
+      "options":[
+        {
+          "name": "Facebook",
+          "icon": "facebook-icon.png",
+          "url": "https://www.facebook.com/sharer/sharer.php?u=https://www.mercadolibre.com.ar/MLA123456789"
+        },
+        {
+          "name": "Twitter",
+          "icon": "twitter-icon.png",
+          "url": "https://twitter.com/intent/tweet?text=Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM&url=https://www.mercadolibre.com.ar/MLA123456789"
+        },
+        {
+          "name": "WhatsApp",
+          "icon": "whatsapp-icon.png",
+          "url": "https://api.whatsapp.com/send?text=Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM - https://www.mercadolibre.com.ar/MLA123456789"
+        }
+      ]
+    }
   }
