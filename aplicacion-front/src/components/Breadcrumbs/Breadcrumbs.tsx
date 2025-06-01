@@ -8,8 +8,6 @@ export const Breadcrumbs:React.FC<BreadCrumbsProps> = ({ items }) => {
     if (!items || items.length === 0) {
         return null;
     }
-
-    console.log("Breadcrumbs items:", items);
     
     return (
         <nav className="breadcrumbs" aria-label="breadcrumb">

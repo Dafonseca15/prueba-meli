@@ -21,6 +21,8 @@ export interface Product {
     seller_info: {
         id: string;
         nickname: string;
+        visitUs: string;
+        url: string;
         reputation_level: 'gold' | 'silver' | 'bronze' | 'none';
         sales_completed: number;
     };
@@ -48,8 +50,43 @@ export interface Product {
         }>;
     };
     breadcrumbs?: BreadCrumbsProps;
-    want_to_buy?: want_to_buy;
-    share?: share;
+    badge_info?: {
+        text: string;
+        category_position: string;
+        category_text?: string;
+        category_url?: string;
+    };
+    rating?: {
+        average: number;
+        total_reviews: number;
+    };
+}
+
+export interface RatingProps {
+    rating: {
+        average: number;
+        total_reviews: number;
+    }
+}
+
+export interface badgeInfoProps {
+    badge_info: {
+        text: string;
+        category_position: string;
+        category_text?: string;
+        category_url?: string;
+    };
+}
+
+export interface sellerInfoProps {
+    seller_info: {
+        id: string;
+        nickname: string;
+        visitUs: string;
+        url: string;
+        reputation_level: 'gold' | 'silver' | 'bronze' | 'none';
+        sales_completed: number;
+    };
 }
 
 export interface BreadCrumbsProps {
@@ -57,18 +94,22 @@ export interface BreadCrumbsProps {
         text: string;
         url: string;
     }>;
+    more_actions?: breadcrumbsMoreActions | null;
 }
 
-export interface want_to_buy {
-    text: string;
-    url: string;
-}
-
-export interface share {
-    title: string;
-    options: Array<{
-        name: string;
-        icon: string;
-        url: string;
+export interface breadcrumbsMoreActions {
+    more_actions: Array<{
+        text: string;
+        url?: string | null;
+        options?: Array<{
+            name: string;
+            icon: string;
+            url: string;
+        }> | null;
     }>;
+}
+
+export interface FavoriteSectionProps {
+    condition: string;
+    sold_quantity: number;
 }

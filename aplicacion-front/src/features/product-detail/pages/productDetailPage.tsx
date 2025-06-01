@@ -32,11 +32,13 @@ export const ProductDetailPage = () => {
             }
             {/* 2. Contenedor para Breadcumbs y Actions */}
             <div className="product-breadcrumbs-actions-wrapper">
-                { product?.breadcrumbs && product?.breadcrumbs.items?.length > 0 &&
+                { product?.breadcrumbs && product?.breadcrumbs?.items?.length > 0 &&
                     <Breadcrumbs items={product.breadcrumbs.items} />
                 }
                 {/* Acciones de venta y compartición */}
-                <SellShareActions />
+                { product?.breadcrumbs?.more_actions && product?.breadcrumbs?.more_actions.more_actions.length > 0 &&
+                    <SellShareActions more_actions={product.breadcrumbs.more_actions.more_actions} />
+                }
             </div>
             {/*3. Contenido principal del producto  */}
             <div className="product-content-wrapper">
