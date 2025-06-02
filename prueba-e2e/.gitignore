@@ -1,0 +1,6 @@
+/node_modules
+
+# Archivos de logs de WebdriverIO (opcional, pero buena práctica)
+/wdio-logs/
+/test-results/ # Si generas reportes en una carpeta así
+.DS_Store # Para usuarios de macOS
