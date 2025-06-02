@@ -33,7 +33,7 @@
       border: 1px solid transparent; // Borde transparente para mantener el tamaño al hover
   
       &:hover {
-        background-color: darken(#3483fa, 10%);
+        background-color: adjust(#3483fa, 10%);
       }
   
       // Subrayado no relevante para botones, pero puedes mantenerlo si lo necesitas

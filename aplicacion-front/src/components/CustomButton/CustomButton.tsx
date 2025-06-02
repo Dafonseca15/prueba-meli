@@ -1,5 +1,3 @@
-// src/components/CustomButton.tsx
-import type React from "react";
 import "./CustomButton.scss"
 
 // Definición de las propiedades para el componente CustomButton
@@ -13,10 +11,6 @@ interface CustomButtonProps {
     fullWidth?: boolean; // Si el botón debe ocupar todo el ancho disponible
     marginTop?: string; // Margen superior opcional
     marginBottom?: string; // Margen inferior opcional
-    // Puedes añadir más props si las necesitas, por ejemplo:
-    // isLoading?: boolean; // Para mostrar un spinner si está cargando
-    // iconLeft?: React.ReactNode; // Para un icono a la izquierda
-    // iconRight?: React.ReactNode; // Para un icono a la derecha
 }
 
 export const CustomButton: React.FC<CustomButtonProps> = ({

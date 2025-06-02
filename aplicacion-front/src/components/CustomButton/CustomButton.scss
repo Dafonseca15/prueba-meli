@@ -15,11 +15,11 @@
       color: white;
   
       &:hover {
-        background-color: darken(#3483fa, 8%); // Azul un poco más oscuro al hover
+        background-color: adjust(#3483fa, 8%); // Azul un poco más oscuro al hover
       }
   
       &:disabled {
-        background-color: lighten(#3483fa, 15%); // Azul más claro cuando deshabilitado
+        background-color: adjust(#3483fa, 15%); // Azul más claro cuando deshabilitado
         cursor: not-allowed;
       }
     }
@@ -30,12 +30,12 @@
   
       &:hover {
         background-color: #f0f8ff; // Un azul muy claro al hacer hover
-        border-color: darken(#3483fa, 8%); // Borde un poco más oscuro al hover
+        border-color: adjust(#3483fa, 8%); // Borde un poco más oscuro al hover
       }
   
       &:disabled {
-        color: lighten(#3483fa, 25%); // Texto más claro
-        border-color: lighten(#3483fa, 25%); // Borde más claro
+        color: adjust(#3483fa, 25%); // Texto más claro
+        border-color: adjust(#3483fa, 25%); // Borde más claro
         background-color: #f8f8f8; // Fondo ligeramente gris
         cursor: not-allowed;
       }

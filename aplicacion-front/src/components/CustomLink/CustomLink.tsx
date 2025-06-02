@@ -1,5 +1,3 @@
-// src/components/CustomLink.tsx
-import type React from "react";
 import "./CustomLink.scss"; // Asegúrate de tener un archivo SCSS para los estilos
 
 // Definición de las propiedades para el componente CustomLink

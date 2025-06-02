@@ -23,13 +23,14 @@
         &:hover {
           text-decoration: none;
         }
+
+        &--separator {
+          margin: 0 8px; // Espacio alrededor del separador
+          color: #999;
+        }
+  
     }
     
-    &__separator {
-        margin: 0 8px; // Espacio alrededor del separador
-        color: #999;
-      }
-
       @media (max-width: 768px) {
         padding: 8px 0;
         font-size: 0.8em;
