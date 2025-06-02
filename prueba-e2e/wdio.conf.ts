@@ -54,7 +54,7 @@ export const config: WebdriverIO.Config = {
     capabilities: [{
         browserName: 'chrome',
         'goog:chromeOptions': {
-            // args: ['--headless', '--disable-gpu'] // Añade estas líneasß
+            // args: ['--headless', '--disable-gpu'] // Añade estas líneas
         }
     }],
 
