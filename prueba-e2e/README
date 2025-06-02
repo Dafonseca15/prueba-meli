@@ -1,0 +1,45 @@
+prueba E2E# Automatización de Pruebas E2E para Mercado Libre
+
+Este proyecto contiene un conjunto de pruebas End-to-End (E2E) automatizadas utilizando **WebdriverIO** con **Cucumber** para verificar la funcionalidad de búsqueda, filtrado y validación de precios en el sitio de Mercado Libre.
+
+Las pruebas están diseñadas para simular el flujo de un usuario real, comenzando desde una búsqueda en Google, navegando a Mercado Libre, aplicando filtros y validando los detalles del producto.
+
+---
+
+## 🚀 Inicio Rápido
+
+Sigue estos pasos para configurar y ejecutar las pruebas en tu entorno local.
+
+### **Prerrequisitos**
+
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
+
+* **Node.js**: Versión 16.x o superior (se recomienda la última versión LTS).
+    * Verifica tu versión: `node -v`
+* **npm** (Node Package Manager): Se instala automáticamente con Node.js.
+    * Verifica tu versión: `npm -v`
+* **Google Chrome**: Un navegador Chrome instalado en tu sistema, ya que las pruebas están configuradas para ejecutarse en él.
+
+### **Configuración del Proyecto**
+
+1.  **Clonar el repositorio** (si aún no lo has hecho):
+    ```bash
+    git clone <URL_DE_TU_REPOSITORIO>
+    cd tu-nombre-del-proyecto/
+    ```
+2.  **Instalar dependencias**:
+    Navega al directorio `prueba-e2e` (donde se encuentra `package.json`) e instala todas las dependencias del proyecto.
+    ```bash
+    cd prueba-e2e/
+    npm install
+    ```
+    Esto instalará WebdriverIO, Cucumber, ChromeDriver y otras librerías necesarias.
+
+---
+
+## 🏃‍♀️ Ejecución de Pruebas
+
+Para ejecutar las pruebas End-to-End, utiliza el siguiente comando desde el directorio `prueba-e2e/`:
+
+```bash
+npx wdio run ./wdio.conf.ts
