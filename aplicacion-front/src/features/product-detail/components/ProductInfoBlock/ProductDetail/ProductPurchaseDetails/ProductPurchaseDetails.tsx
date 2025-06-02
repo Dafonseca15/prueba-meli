@@ -1,3 +1,5 @@
+import { CustomLink } from "../../../../../../components/CustomLink/CustomLink";
+import { CustomText } from "../../../../../../components/CustomText/CustomText";
 import { formatPrice } from "../../../../../../utils/utils";
 import type { ProductDetailProps } from "../../../../types/product"
 import "./ProductPurchaseDetails.scss"
@@ -34,13 +36,24 @@ export const ProductPurchaseDetails:React.FC<ProductDetailProps> = ({purchase}) 
             </div>
 
             {installments && installments.quantity > 0 && (
-                <p className="product-purchase-details__installments">
-                en {installments.quantity} cuotas de{' '}
-                <span className="product-purchase-details__installments-amount">
-                    {formatPrice(installments.amount, currency, decimals)}
-                </span>{' '}
-                con <span className="product-purchase-details__percentage">{installments.rate}</span>% interés
-                </p>
+                <CustomText 
+                    as="p" 
+                    className="product-purchase-details__installments"
+                    size="md"
+                    marginBottom="1rem"
+                    color="#343434"
+                >
+                    en {' '} 
+                    <span className="product-purchase-details__installments-amount">
+                        {installments.quantity} cuotas de{' '} 
+                        <span className="product-purchase-details__installments-amount--value">
+                            {formatPrice(installments.amount, currency, decimals)}
+                        </span> {' '} con {' '} 
+                        <span className="product-purchase-details__installments-amount--value">
+                            {installments.rate}
+                        </span> % interés
+                    </span>{' '}
+                </CustomText>
             )}
 
             {
@@ -53,9 +66,7 @@ export const ProductPurchaseDetails:React.FC<ProductDetailProps> = ({purchase}) 
                 )
             }
 
-            <a href="#" className="product-purchase-details__payment-methods-link">
-                Ver los medios de pago
-            </a>
+            <CustomLink children="Ver los medios de pago" href="#" size="xs"/>
         </div>
     )
 }

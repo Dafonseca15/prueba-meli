@@ -2,6 +2,7 @@ import { useState } from "react";
 import type { ColorsSelectorProps } from "../../../../types/product"
 import "./ProductColorSelector.scss"
 import { useNavigate } from "react-router-dom";
+import { CustomText } from "../../../../../../components/CustomText/CustomText";
 
 export const ProductColorSelectro:React.FC<ColorsSelectorProps> = ({color_selector}) => {
 
@@ -10,9 +11,12 @@ export const ProductColorSelectro:React.FC<ColorsSelectorProps> = ({color_select
 
     return (
         <div className="product-color-selector">
-            <p className="product-color-selector__label">
+            <CustomText as="span" size="sm" color="#0000008c" className="product-color-selector__label">
                 Color: <span className="product-color-selector__selected-name">{nameColor}</span>
-            </p>
+            </CustomText>
+            {/* <p className="product-color-selector__label">
+                Color: <span className="product-color-selector__selected-name">{nameColor}</span>
+            </p> */}
             <div className="product-color-selector__options">
                 {color_selector.map((option, index) => (
                 <button

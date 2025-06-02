@@ -194,5 +194,47 @@
         "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida.",
         "Memoria interna de 256 GB."
       ]
+    },
+    "buy_and_delivery": {
+      "delivery": {
+        "title": "Envío gratis",
+        "description": "Recibí tu producto en la puerta de tu casa sin costo adicional.",
+        "calculate_shipping": "Calcular cuándo llega",
+        "shipping_url": "/shipping-calculator"
+      },
+      "disponibility": {
+        "title": "¡Última disponible!",
+        "stock": "50 unidades disponibles"
+      },
+      "actions": [
+        {
+          "type": "buy_now",
+          "text": "Comprar ahora",
+          "url": "/buy-now",
+          "is_primary": true
+        },
+        {
+          "type": "add_to_cart",
+          "text": "Agregar al carrito",
+          "url": "/add-to-cart",
+          "is_primary": false
+        }
+      ],
+      "benefits": [
+      {
+        "icon": "return",
+        "text": "Devolución gratis.",
+        "description": "Tienes 30 días desde que lo recibes."
+      },
+      {
+        "icon": "shield",
+        "text": "Compra Protegida,",
+        "description": "recibe el producto que esperabas o te devolvemos tu dinero."
+      },
+      {
+        "icon": "medal",
+        "text": "12 meses de garantía de fábrica."
+      }
+    ]
     }
   }

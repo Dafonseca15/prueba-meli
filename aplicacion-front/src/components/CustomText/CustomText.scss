@@ -1,0 +1,34 @@
+// src/styles/components/_custom-text.scss
+
+.custom-text {
+    // Estilos base que pueden ser sobreescritos
+    line-height: 1.5; // Un buen valor por defecto
+    margin: 0; // Elimina márgenes por defecto de algunos elementos como <p>
+  
+    // Tamaños de texto (puedes ajustar los valores según tu diseño)
+    &--size-xs { font-size: 0.75rem; } // ~12px
+    &--size-sm { font-size: 0.875rem; } // ~14px
+    &--size-md { font-size: 1rem; } // ~16px (base)
+    &--size-lg { font-size: 1.125rem; } // ~18px
+    &--size-xl { font-size: 1.25rem; } // ~20px
+  
+    // Pesos de la fuente (igual que en CustomTitle y CustomLink)
+    &--bold-light { font-weight: 300; }
+    &--bold-normal { font-weight: 400; }
+    &--bold-medium { font-weight: 500; }
+    &--bold-semibold { font-weight: 600; }
+    &--bold-bold { font-weight: 700; }
+    &--bold-extrabold { font-weight: 800; }
+  
+    // Alineación del texto
+    &--align-left { text-align: left; }
+    &--align-center { text-align: center; }
+    &--align-right { text-align: right; }
+    &--align-justify { text-align: justify; }
+  
+    // Estilos para tipos de etiqueta específicos si los necesitas.
+    // Por ejemplo, para <p> podrías querer un margen inferior por defecto si no se pasa marginBottom.
+    &--as-p {
+      // margin-bottom: 1rem; // Ejemplo: un margen inferior por defecto para párrafos
+    }
+  }

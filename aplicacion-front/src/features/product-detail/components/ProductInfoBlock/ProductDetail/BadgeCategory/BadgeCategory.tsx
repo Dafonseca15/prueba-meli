@@ -1,3 +1,4 @@
+import { CustomLink } from "../../../../../../components/CustomLink/CustomLink"
 import type { badgeInfoProps } from "../../../../types/product"
 import "./BadgeCategory.scss"
 
@@ -7,14 +8,7 @@ export const BadgeCategory:React.FC<badgeInfoProps> = ({ badge_info: { text, cat
     return (
         <div className="badge-category-container">
             <span className="badge-category-container__badge">{text}</span>
-            <a href={category_url} className="badge-category-container__link">
-                <span className="badge-category-container__category">
-                    {category_position}
-                </span>
-                <span className="badge-category-container__text">
-                    {category_text}
-                </span>
-            </a>
+            <CustomLink children={`${category_position} ${category_text}`} href={category_url} size="xs"/>
         </div>
     )
 }

@@ -9,6 +9,7 @@ interface CustomTitleProps {
     className?: string; // Clases CSS adicionales
     align?: 'left' | 'center' | 'right' | 'justify'; // Alineación del texto
     marginBottom?: string; // Margen inferior personalizado
+    marginTop?: string; // Margen inferior personalizado
     // Puedes añadir más props si las necesitas, por ejemplo:
     // lineHeight?: string;
     // textTransform?: 'uppercase' | 'lowercase' | 'capitalize';
@@ -23,6 +24,7 @@ export const CustomTitle: React.FC<CustomTitleProps> = ({
     className = '',
     align = 'left',
     marginBottom,
+    marginTop,
 }) => {
 
     const classes = [
@@ -48,12 +50,15 @@ export const CustomTitle: React.FC<CustomTitleProps> = ({
     if (marginBottom) {
         inlineStyles.marginBottom = marginBottom;
     }
+    if (marginTop) {
+        inlineStyles.marginTop = marginTop;
+    }
 
     // Renderiza el elemento HTML según el `level`
     const Tag = level;
     return (
         <Tag className={classes.filter(Boolean).join(' ')} style={inlineStyles}>
-            {children}
+        {children}
         </Tag>
     );
 };

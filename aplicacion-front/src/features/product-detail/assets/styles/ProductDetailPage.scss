@@ -1,12 +1,13 @@
 // src/features/product-detail/assets/styles/ProductDetailPage.scss
 
 .product-detail-page {
-    max-width: 1200px;
     margin: 20px auto;
-    padding: 0 20px;
+    padding: 20px 70px;
     font-family: Arial, sans-serif;
     color: #333;
-  
+    flex: 1;
+    flex-direction: column;
+
     .product-detail-error {
       color: #d32f2f; // Rojo para errores
     }
@@ -20,8 +21,8 @@
     }
   
     .product-content-wrapper {
-      display: flex;
-      flex-wrap: wrap; // Permite que los elementos se envuelvan en pantallas pequeñas
+      display: grid;
+      grid-template-columns: 2.2fr 0.8fr; // Dos columnas, la segunda el doble de ancha
       gap: 30px; // Espacio entre las secciones de imágenes e información
       background-color: #fff;
       padding: 20px;
@@ -34,9 +35,12 @@
   @media (max-width: 768px) {
     .product-detail-page {
       padding: 0 15px;
+      grid-template-columns: 1;
+      display: flex;
     }
   
     .product-content-wrapper {
-      flex-direction: column; // Stack elements vertically on small screens
+      // flex-direction: column; // Stack elements vertically on small screens
+      display: inline !important;
     }
-  }
+}

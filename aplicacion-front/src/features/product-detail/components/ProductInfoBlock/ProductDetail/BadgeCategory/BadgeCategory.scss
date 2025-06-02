@@ -15,20 +15,4 @@
         text-transform: uppercase; // "MÁS VENDIDO" en mayúsculas
         white-space: nowrap; // Evita que el texto del badge se rompa
     }
-
-    &__link {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: #3483fa; // Azul de enlace de MercadoLibre
-        font-size: 12px; // Tamaño de fuente para el texto de categoría
-
-        &:hover {
-            text-decoration: none;
-        }
-    }
-
-    &__category {
-        margin-right: 3px; // Pequeño espacio entre el porcentaje y el texto
-      }
 }

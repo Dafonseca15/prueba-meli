@@ -1,3 +1,5 @@
+import { CustomLink } from "../../../../../../components/CustomLink/CustomLink";
+import { CustomText } from "../../../../../../components/CustomText/CustomText";
 import type { keyInfoProps } from "../../../../types/product";
 import "./ProductInfoKey.scss"
 
@@ -7,7 +9,7 @@ export const ProdutInfoKey: React.FC<keyInfoProps> = ({ keyInfo }) => {
     
     return (
         <div className="product-info-key">
-            <p className="product-info-key__title">{title}</p>
+            <CustomText children={title} as="span" size="sm" bold color="#343434"/>
             <ul className="product-info-key__list">
                 {
                     items.map((item, index) => (
@@ -21,9 +23,7 @@ export const ProdutInfoKey: React.FC<keyInfoProps> = ({ keyInfo }) => {
             </ul>
             {
                 items.length > 3 && (
-                    <a href="#" className="product-info-key__characteristics-link">
-                        Ver características
-                    </a>
+                    <CustomLink children="Ver características" href="#" size="xs"/>
                 )
             }
         </div>

@@ -33,7 +33,7 @@ export const ProductDetail: React.FC<ProductInfoBlockProps> = ( { product} ) => 
                 />
             )}
 
-            {product.badge_info && (
+            {product.badge_info && product.badge_info?.category_url && (
                 <BadgeCategory badge_info={product.badge_info} 
                 />
             )}

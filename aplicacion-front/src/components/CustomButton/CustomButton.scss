@@ -1,0 +1,63 @@
+// src/styles/components/_custom-button.scss
+
+.custom-button {
+    border: none;
+    border-radius: 6px; // Bordes ligeramente redondeados
+    padding: 0.75rem 1.5rem; // Padding base
+    font-weight: bold; // Negrita para el texto del botón
+    font-size: 1rem; // Tamaño de fuente base
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease; // Transiciones suaves
+  
+    // Tipos de botones
+    &--type-primary {
+      background-color: #3483fa; // Azul de Mercado Libre
+      color: white;
+  
+      &:hover {
+        background-color: darken(#3483fa, 8%); // Azul un poco más oscuro al hover
+      }
+  
+      &:disabled {
+        background-color: lighten(#3483fa, 15%); // Azul más claro cuando deshabilitado
+        cursor: not-allowed;
+      }
+    }
+  
+    &--type-secondary {
+      background-color: #4189E626; // Fondo blanco
+      color: #3483fa; // Texto azul
+  
+      &:hover {
+        background-color: #f0f8ff; // Un azul muy claro al hacer hover
+        border-color: darken(#3483fa, 8%); // Borde un poco más oscuro al hover
+      }
+  
+      &:disabled {
+        color: lighten(#3483fa, 25%); // Texto más claro
+        border-color: lighten(#3483fa, 25%); // Borde más claro
+        background-color: #f8f8f8; // Fondo ligeramente gris
+        cursor: not-allowed;
+      }
+    }
+  
+    // Tamaños de botones
+    &--size-sm {
+      font-size: 0.875rem;
+      padding: 0.6rem 1.2rem;
+    }
+    &--size-md {
+      font-size: 1rem;
+      padding: 0.75rem 1.5rem;
+    }
+    &--size-lg {
+      font-size: 1.125rem;
+      padding: 1rem 2rem;
+    }
+  
+    // Modificador para ancho completo
+    &--full-width {
+      width: 100%;
+      display: block; // Asegura que ocupe todo el ancho
+    }
+  }

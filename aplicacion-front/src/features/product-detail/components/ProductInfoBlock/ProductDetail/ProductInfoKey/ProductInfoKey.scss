@@ -5,14 +5,6 @@
     font-family: Arial, sans-serif;
     color: #333; // Color de texto principal
   
-    &__title {
-      font-size: 14px;
-      font-weight: bold; // Normal, no tan negrita como un h2
-      margin-top: 0;
-      margin-bottom: 14px;
-      color: #333;
-    }
-  
     &__list {
       list-style: none; // Quita los puntos de lista por defecto
       padding: 0;
@@ -36,18 +28,6 @@
         top: 0;
         font-size: 1.2em; // Tamaño del bullet
         line-height: 1.5; // Ajusta el line-height para que el bullet esté alineado
-      }
-    }
-  
-    &__characteristics-link {
-      font-size: 0.85em;
-      color: #3483fa; // Azul de enlace de MercadoLibre
-      text-decoration: none;
-      display: inline-block; // Para que margin-top y margin-bottom funcionen
-      margin-bottom: 25px; // Espacio entre este enlace y las opciones de compra
-  
-      &:hover {
-        text-decoration: none;
       }
     }
   
@@ -77,19 +57,9 @@
       margin-top: 15px;
       padding-top: 15px;
   
-      &__title {
-        font-size: 1em;
-        margin-bottom: 10px;
-      }
-  
       &__feature-item {
         font-size: 0.85em;
         margin-bottom: 6px;
-      }
-  
-      &__characteristics-link {
-        font-size: 0.8em;
-        margin-bottom: 20px;
       }
   
       &__buying-options-label {

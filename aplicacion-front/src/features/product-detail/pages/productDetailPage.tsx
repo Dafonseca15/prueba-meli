@@ -5,6 +5,7 @@ import { ProductInfoBlock } from "../components/ProductInfoBlock/ProductInfoBloc
 import { ProductInterestRow } from "../../../components/ProductInterestRow/ProductInterestRow";
 import { Breadcrumbs } from "../../../components/Breadcrumbs/Breadcrumbs";
 import { SellShareActions } from "../../../components/sellShareActions/sellShareActions";
+import { ProductInfoRight } from "../components/ProductInfoRight/ProductInfoRight";
 
 
 export const ProductDetailPage = () => {
@@ -43,6 +44,7 @@ export const ProductDetailPage = () => {
             {/*3. Contenido principal del producto  */}
             <div className="product-content-wrapper">
                 <ProductInfoBlock product={product} />
+                <ProductInfoRight product={product}/>
             </div>
         </div>
     );

@@ -58,8 +58,8 @@ export interface Product {
     badge_info?: {
         text: string;
         category_position: string;
-        category_text?: string;
-        category_url?: string;
+        category_text: string;
+        category_url: string;
     };
     rating?: {
         average: number;
@@ -77,6 +77,56 @@ export interface Product {
         title: string;
         items: string[];
     };
+    buy_and_delivery: {
+        delivery: {
+            title: string;
+            description: string;
+            calculate_shipping: string;
+            shipping_url: string;
+        };
+        disponibility: {
+            title: string;
+            stock: string;
+        };
+        actions: Array<{
+            type: string;
+            text: string;
+            url?: string;
+            is_primary?: boolean;
+        }>;
+        benefits?: Array<{
+            icon: string;
+            text: string;
+            description?: string;
+        }>;
+    };
+}
+
+export interface BuyAndDeliveryProps {
+    buy_and_delivery: {
+        delivery: {
+            title: string;
+            description: string;
+            calculate_shipping: string;
+            shipping_url: string;
+        };
+        disponibility: {
+            title: string;
+            stock: string;
+        };
+        actions: Array<{
+            type: string;
+            text: string;
+            url?: string;
+            is_primary?: boolean;
+        }>;
+        benefits?: Array<{
+            icon: string;
+            text: string;
+            description?: string;
+        }>;
+    };
+    seller?: string;
 }
 
 export interface keyInfoProps {
@@ -126,8 +176,8 @@ export interface badgeInfoProps {
     badge_info: {
         text: string;
         category_position: string;
-        category_text?: string;
-        category_url?: string;
+        category_text: string;
+        category_url: string;
     };
 }
 
