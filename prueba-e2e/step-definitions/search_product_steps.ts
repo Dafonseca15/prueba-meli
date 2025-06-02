@@ -47,7 +47,7 @@ Then(/^the product price on the detail page should match the price from the list
     console.log('Precio esperado (de la lista):', expectedProductPrice);
     const actualProductPrice = await MercadoLibreProductDetailPage.getProductPrice();
     console.log(`Precio actual (de la página de detalle): ${actualProductPrice}`);
-    console.log('--- Fin Depuración ---');
+    console.log('--- Fin Depuración ---', actualProductPrice , expectedProductPrice);
     expect(actualProductPrice).toEqual(expectedProductPrice);
     console.log('STEP: Product price validated successfully.');
 });
