@@ -17,20 +17,32 @@ export const ProductPurchaseDetails:React.FC<ProductDetailProps> = ({purchase}) 
     } = purchase;
 
     return (
-        <div className="product-purchase-details">
+        <div 
+            className="product-purchase-details" 
+            data-testid="product-purchase-details"
+            >
             {original_amount && original_amount > amount && (
-                <p className="product-purchase-details__original-price">
-                {formatPrice(original_amount, currency, decimals)}
+                <p 
+                    className="product-purchase-details__original-price"
+                    data-testid="product-purchase-details__original-price"
+                    >
+                    {formatPrice(original_amount, currency, decimals)}
                 </p>
             )}
 
             <div className="product-purchase-details__current-price-row">
-                <h2 className="product-purchase-details__current-price">
-                {formatPrice(amount, currency, decimals)}
+                <h2 
+                    className="product-purchase-details__current-price"
+                    data-testid="product-purchase-details__current-price"
+                    >
+                        {formatPrice(amount, currency, decimals)}
                 </h2>
                 {discount_percentage && discount_percentage > 0 && (
-                <span className="product-purchase-details__discount-percentage">
-                    {discount_percentage}% OFF
+                <span 
+                    className="product-purchase-details__discount-percentage"
+                    data-testid="product-purchase-details__discount-percentage"
+                    >
+                        {discount_percentage}% OFF
                 </span>
                 )}
             </div>
@@ -58,9 +70,15 @@ export const ProductPurchaseDetails:React.FC<ProductDetailProps> = ({purchase}) 
 
             {
                 promotion && promotion.tc_agreement && (
-                    <div className="product-purchase-details__tc-agreement">
-                        <p className="product-purchase-details__tc-agreement__text">
-                            {promotion.discount}% OFF {' '} {promotion.tc_agreement}
+                    <div 
+                        className="product-purchase-details__tc-agreement"
+                        data-testid="product-purchase-details__tc-agreement"
+                    >
+                        <p 
+                            className="product-purchase-details__tc-agreement__text"
+                            data-testid="product-purchase-details__tc-agreement__text"
+                            >
+                                {promotion.discount}% OFF {' '} {promotion.tc_agreement}
                         </p>
                     </div>
                 )

@@ -13,12 +13,17 @@ export const ProductBuy:React.FC<BuyAndDeliveryProps> = ({ buy_and_delivery, sel
     const { delivery, disponibility, actions, benefits } = buy_and_delivery;
 
     return (
-        <div className="product-buy-container">
+        <div 
+            className="product-buy-container"
+            data-testid="product-buy-container"
+            >
             {/**1. Datos de envio */}
             <CustomText as="span" bold={true} color="#00a650" size="md">
                 {delivery.title} <span className="product-buy-container__text-bold">a todo el país</span></CustomText>
             <CustomText children={delivery.description} color="#0000008c" size="xs"/>
-            <CustomLink children={delivery.calculate_shipping} href={delivery.shipping_url} size="xs"/>
+            {delivery.calculate_shipping && delivery.shipping_url && (
+                <CustomLink children={delivery.calculate_shipping} href={delivery.shipping_url} size="xs"/>
+            )}
             
             {/**2. Titulo aluciente a la disponibiliddad */}
             <CustomTitle children={disponibility.title} level="h3" size="2xl" bold="bold" marginBottom="1.5rem" marginTop="1.5rem"></CustomTitle>
@@ -45,8 +50,15 @@ export const ProductBuy:React.FC<BuyAndDeliveryProps> = ({ buy_and_delivery, sel
             {/**5. Beneficios */}
             {
                 benefits?.map((benefit, index) => (
-                    <div key={index} className="product-buy-container__benefits">
-                        <img className="product-buy-container__icon" src={benefit.icon.includes('return') ? ReturnIcon : benefit.icon.includes('shield') ? ShieldIcon : MedalIcon} alt="" />
+                    <div 
+                        key={index} 
+                        className="product-buy-container__benefits"
+                        data-testid="product-buy-container__benefits-item"
+                        >
+                        <img 
+                            className="product-buy-container__icon" 
+                            src={benefit.icon.includes('return') ? ReturnIcon : benefit.icon.includes('shield') ? ShieldIcon : MedalIcon} alt="" 
+                            />
                         <CustomText as="span" size="sm" color="#0000008c">
                             {benefit.text}
                             {benefit.description && ` ${benefit.description}`}

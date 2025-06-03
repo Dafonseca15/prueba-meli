@@ -26,7 +26,10 @@ export const ProductDetailPage = () => {
     // console.log("ProductDetailPage - product:", product);
     
     return (
-        <div className="product-detail-page">
+        <div 
+            className="product-detail-page"
+            data-testid="product-detail-page"
+            >
             {/* 1. Fila - Tambien te puede interesar */}
             { product.interest && product.interest.items.length > 0 &&
                 <ProductInterestRow title={product.interest?.title} items={product.interest?.items} />

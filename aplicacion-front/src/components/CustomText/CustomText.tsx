@@ -1,5 +1,3 @@
-// src/components/CustomText.tsx
-import type React from "react";
 import "./CustomText.scss"
 
 // Definición de las propiedades para el componente CustomText

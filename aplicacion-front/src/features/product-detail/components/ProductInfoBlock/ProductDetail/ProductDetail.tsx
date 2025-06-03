@@ -1,15 +1,12 @@
-import type React from "react";
 import type { Product } from "../../../types/product";
-import { formatPrice } from "../../../../../utils/utils";
-import { calculateDiscount, discountPercentage } from "../../../utils/utils";
 import { CustomTitle } from "../../../../../components/CustomTitle/CustomTitle";
 import { VisitOurStore } from "./VisitOurStore/VisitOurStore";
 import { FavoriteSection } from "./FavoriteSection/FavoriteSection";
 import { BadgeCategory } from "./BadgeCategory/BadgeCategory";
 import { Rating } from "../../../../../components/Rating/Rating";
 import { ProductPurchaseDetails } from "./ProductPurchaseDetails/ProductPurchaseDetails";
-import { ProductColorSelectro } from "./ProductColorSelector/ProductColorSelector";
-import { ProdutInfoKey } from "./ProductInfoKey/ProductInfoKey";
+import { ProductColorSelector } from "./ProductColorSelector/ProductColorSelector";
+import { ProductInfoKey } from "./ProductInfoKey/ProductInfoKey";
 
 interface ProductInfoBlockProps {
     product: Product;
@@ -17,12 +14,8 @@ interface ProductInfoBlockProps {
 
 export const ProductDetail: React.FC<ProductInfoBlockProps> = ( { product} ) => {
 
-    // const price = formatPrice(product.price.amount, product.price.currency, product.price.decimals);
-    // const discount = calculateDiscount(product.price.original_amount || 0, product.price.amount);
-    // const discount_percentage = discountPercentage(product.price.original_amount || 0, product.price.amount);
-
     return (
-        <div className="product-info">
+        <div className="product-info" data-testid="product-info">
             {product.seller_info &&( 
                 <VisitOurStore seller_info={product.seller_info}
                 />
@@ -55,11 +48,11 @@ export const ProductDetail: React.FC<ProductInfoBlockProps> = ( { product} ) => 
 
 
             {product.color_selector && (
-                <ProductColorSelectro color_selector={product.color_selector}/>
+                <ProductColorSelector color_selector={product.color_selector}/>
             )}
 
             {product.keyInfo && (
-                <ProdutInfoKey keyInfo={product.keyInfo}
+                <ProductInfoKey keyInfo={product.keyInfo}
                 />
             )}
             

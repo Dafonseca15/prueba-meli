@@ -6,8 +6,6 @@ export const AppRouter = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/product/:id" element={<ProductDetailPage />} />
-        {/* <Route path="/products/:id" element={<h1>Product Detail Page</h1>} />
-        <Route path="*" element={<h1>404 Not Found</h1>} /> */}
       </Routes>
     </BrowserRouter>
   );

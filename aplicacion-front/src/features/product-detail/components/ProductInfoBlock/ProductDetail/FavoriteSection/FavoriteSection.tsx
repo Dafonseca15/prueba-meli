@@ -5,8 +5,12 @@ import "./FavoriteSection.scss"
 
 export const FavoriteSection = ({ condition, sold_quantity }: FavoriteSectionProps) => {
     return (
-        <div className="favorite-section-container">
-            <div className="favorite-section-container__status-and-favorites">
+        <div className="favorite-section-container"
+            data-testid="favorite-section-container"
+        >
+            <div className="favorite-section-container__status-and-favorites"
+                data-testid="favorite-section-container__status-and-favorites"
+            >
                 <CustomText size="xs" color="#0000008c" className="favorite-section-container__condition">
                     { condition } | {`${Math.floor(sold_quantity / 100) * 100} vendidos`}
                 </CustomText>

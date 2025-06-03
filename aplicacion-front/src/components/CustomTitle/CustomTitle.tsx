@@ -1,5 +1,3 @@
-import type React from "react";
-
 interface CustomTitleProps {
     children: React.ReactNode; // El contenido del título (texto o elementos)
     level?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span'; // Nivel de heading HTML

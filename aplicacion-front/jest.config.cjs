@@ -17,6 +17,8 @@ module.exports = {
     // Mapeo de módulos para alias (si los usas en tu proyecto, ej. src/utils -> @utils)
     moduleNameMapper: {
       '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+      "^\\.\\.\\/\\.\\.\\/\\.\\.\\/\\.\\.\\/\\.\\.\\/\\.\\.\\/utils\\/utils$": "<rootDir>/src/utils/utils.ts",
+
     },
     // Archivos de configuración a ejecutar antes de cada prueba (para @testing-library/jest-dom)
     setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],

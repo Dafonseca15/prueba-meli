@@ -8,7 +8,7 @@ export const SellShareActions:React.FC<breadcrumbsMoreActions> = ({ more_actions
         <div className="sell-share-actions">
             {
                 more_actions.map((action, index) => (
-                    <React.Fragment key={index}>
+                    <div key={index} data-testid="action-item-wrapper">
                         {
                             action.url ? (
                             <a href={action.url} className={`sell-share-actions__link ${index === 0 ? 'separator' : ''}`}>
@@ -20,7 +20,7 @@ export const SellShareActions:React.FC<breadcrumbsMoreActions> = ({ more_actions
                                 </span>
                             )
                         }
-                    </React.Fragment>
+                    </div>
                 ) )
             }
         </div>

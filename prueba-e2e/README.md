@@ -57,7 +57,7 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 1.  **Clonar el repositorio** (si aún no lo has hecho):
     ```bash
-    git clone <URL_DE_TU_REPOSITORIO>
+    git clone https://github.com/Dafonseca15/prueba-meli.git
     cd tu-nombre-del-proyecto/
     ```
 2.  **Instalar dependencias**:
