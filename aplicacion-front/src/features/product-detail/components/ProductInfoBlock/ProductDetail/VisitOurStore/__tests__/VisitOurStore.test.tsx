@@ -3,9 +3,7 @@ import { VisitOurStore } from '../VisitOurStore';
 import type { sellerInfoProps } from '../../../../../types/product';
 
 // --- MOCKS DE COMPONENTES HIJOS ---
-
 // Mock para CustomLink
-// Asegúrate de que la ruta sea correcta desde este archivo de test
 jest.mock("../../../../../../../components/CustomLink/CustomLink", () => ({
   CustomLink: jest.fn(({ children, href, size, className }) => (
     <a

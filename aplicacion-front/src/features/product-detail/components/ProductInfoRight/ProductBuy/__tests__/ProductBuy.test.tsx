@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { ProductBuy } from '../ProductBuy'; // Ruta a tu componente ProductBuy
-import type { BuyAndDeliveryProps } from '../../../../types/product'; // Ruta a tu tipo BuyAndDeliveryProps
+import { ProductBuy } from '../ProductBuy';
+import type { BuyAndDeliveryProps } from '../../../../types/product';
 import { CustomButton } from "../../../../../../components/CustomButton/CustomButton";
 import { CustomLink } from "../../../../../../components/CustomLink/CustomLink";
 import { CustomText } from "../../../../../../components/CustomText/CustomText";
@@ -156,7 +156,7 @@ describe("Feature: Product Buy and Delivery Details Display", () => {
     });
 
     it("Then: the main container should be present", () => {
-      // Necesitas añadir data-testid="product-buy-container" al div principal en ProductBuy.tsx
+      // Busca data-testid="product-buy-container" al div principal en ProductBuy.tsx
       expect(screen.getByTestId("product-buy-container")).toBeInTheDocument();
       expect(screen.getByTestId("product-buy-container")).toHaveClass("product-buy-container");
     });

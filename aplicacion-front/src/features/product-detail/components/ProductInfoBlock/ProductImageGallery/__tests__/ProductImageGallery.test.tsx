@@ -1,7 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import { ProductImageGallery } from '../ProductImageGallery'; // Ruta a tu componente
-
-// No necesitamos mocks de componentes hijos aquí, ya que solo usa elementos HTML nativos.
+import { ProductImageGallery } from '../ProductImageGallery'; 
 
 // Feature: Product Image Gallery Display
 describe("Feature: Product Image Gallery Display", () => {
@@ -24,14 +22,11 @@ describe("Feature: Product Image Gallery Display", () => {
     });
 
     it("Then: the main image section should be present", () => {
-      // Necesitas añadir data-testid="product-images-section" al div principal en ProductImageGallery.tsx
       expect(screen.getByTestId("product-images-section")).toBeInTheDocument();
       expect(screen.getByTestId("product-images-section")).toHaveClass("product-images-section");
     });
 
     it("And: the main image should display the first picture initially", () => {
-      // Necesitas añadir data-testid="product-main-image" al div que contiene la imagen principal
-      // y data-testid="main-image-element" a la propia img principal
       const mainImageElement = screen.getByTestId("main-image-element");
       expect(mainImageElement).toBeInTheDocument();
       expect(mainImageElement).toHaveAttribute("src", mockPictures[0]);
@@ -40,8 +35,6 @@ describe("Feature: Product Image Gallery Display", () => {
     });
 
     it("And: the first thumbnail should have the 'active' class initially", () => {
-      // Necesitas añadir data-testid="product-thumbnail-gallery" al div de la galería de miniaturas
-      // y data-testid="thumbnail-image-element-<index>" a cada img de miniatura
       const firstThumbnail = screen.getByTestId("thumbnail-image-element-0");
       expect(firstThumbnail).toBeInTheDocument();
       expect(firstThumbnail).toHaveClass("thumbnail");

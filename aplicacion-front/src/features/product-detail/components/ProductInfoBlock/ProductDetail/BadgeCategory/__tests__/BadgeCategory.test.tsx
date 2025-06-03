@@ -1,5 +1,3 @@
-// Mockear CustomLink
-// Usaremos un data-testid para encontrar el link mockeado y verificar sus props
 jest.mock('../../../../../../../components/CustomLink/CustomLink', () => ({
     CustomLink: jest.fn(({ children, href, size }) => (
       // Renderizamos un 'a' simple con data-testid para poder testearlo

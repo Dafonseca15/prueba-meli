@@ -1,5 +1,3 @@
-// src/features/product-detail/components/ProductDetailPage/hooks/__tests__/useProductDetails.test.tsx
-
 import { renderHook, waitFor } from '@testing-library/react';
 import { useProductDetails } from '../useProductDetail'; // Ruta a tu custom hook
 import { fetchProductDetails } from '../../api/productApi'; // Ruta a tu función de API
@@ -12,7 +10,7 @@ jest.mock('../../api/productApi', () => ({
   fetchProductDetails: jest.fn(), // Mockeamos la función de la API
 }));
 
-// Importa el mock para poder limpiarlo en beforeEach
+// Importamos el mock para poder limpiarlo en beforeEach
 import { fetchProductDetails as mockFetchProductDetails } from '../../api/productApi';
 
 // --- FIN DE MOCKS ---

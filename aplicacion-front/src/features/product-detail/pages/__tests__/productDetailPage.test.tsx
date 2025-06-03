@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { ProductDetailPage } from '../ProductDetailPage'; // Ruta a tu componente ProductDetailPage
-import type { Product } from '../../types/product'; // Ruta a tu tipo Product
+import { ProductDetailPage } from '../ProductDetailPage';
+import type { Product } from '../../types/product';
 
 // --- MOCKS DE HOOKS Y COMPONENTES HIJOS ---
 
@@ -217,7 +217,7 @@ describe("Feature: Product Detail Page Display", () => {
     });
 
     it("Then: the main product detail page container should be present", () => {
-      // Necesitas añadir data-testid="product-detail-page" al div principal en ProductDetailPage.tsx
+      // We find data-testid="product-detail-page" al div principal en ProductDetailPage.tsx
       expect(screen.getByTestId("product-detail-page")).toBeInTheDocument();
       expect(screen.getByTestId("product-detail-page")).toHaveClass("product-detail-page");
     });

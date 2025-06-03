@@ -73,10 +73,6 @@ describe('Breadcrumbs Component (BDD Style)', () => {
       // El separador '>' debe ser el siguiente hermano del <li> que contiene el enlace
       // Accedemos al padre (li) y luego al siguiente hermano, que debería ser el span del separador
       expect(linkElectronica.parentNode?.nextSibling).not.toBeNull(); // Asegura que hay un siguiente hermano (li)
-      // Necesitamos acceder al span del separador que es un hermano del <a> dentro del <li>
-      // Según tu HTML, el separador '>' está fuera del <a>, pero es un hermano del <a> dentro del <li>
-      // O sea, el separador esta fuera del <a> pero dentro del <li>.
-      // Si el separador esta fuera del <li>, necesitas cambiar la forma de acceder
       const liElectronica = linkElectronica.closest('li');
       if (liElectronica) {
         // Busca el span del separador que es hermano del enlace dentro del mismo li

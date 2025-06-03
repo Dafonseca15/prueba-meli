@@ -1,5 +1,3 @@
-// src/utils/__tests__/utils.test.ts (o .js)
-
 import { calculateDiscount, discountPercentage } from '../utils'; // Ruta a tu archivo utils
 
 // Feature: Discount Calculation and Percentage Formatting

@@ -1,6 +1,3 @@
-// src/features/product-detail/components/ProductInfoBlock/ProductDetail/ProductPurchaseDetails/__tests__/ProductPurchaseDetails.test.tsx
-
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import type { ProductDetailProps } from '../../../../../types/product';
 import { CustomText } from "../../../../../../../components/CustomText/CustomText"
@@ -27,13 +24,6 @@ jest.mock("../../../../../../../components/CustomText/CustomText", () => ({
   )),
 }));
 
-// --- ELIMINAMOS EL MOCK DE formatPrice ---
-// var mockFormatPrice = jest.fn((amount, currency, decimals) => {
-//   return `${currency} ${amount.toLocaleString('es-CO', { minimumFractionDigits: decimals, maximumFractionDigits: decimals })}`;
-// });
-// jest.mock("../../../../../../utils/utils", () => ({
-//   formatPrice: mockFormatPrice,
-// }));
 // --- FIN DE MOCKS ---
 
 // Importa el componente a probar DESPUÉS de todos los jest.mock()

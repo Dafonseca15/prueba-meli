@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { CustomLink } from '../CustomLink'; // Asegúrate de la ruta correcta
+import { CustomLink } from '../CustomLink';
 
 describe('CustomLink Component (BDD Style)', () => {
   const defaultProps = {

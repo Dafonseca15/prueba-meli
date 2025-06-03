@@ -82,23 +82,7 @@ describe('ProductInfoBlock Component (BDD Style)', () => {
         // Para verificar el objeto product completo, podemos pasar un ID o stringify si necesitamos todo el objeto
         // En este mock, pasamos solo el ID para simplificar la aserción
         expect(detail).toHaveAttribute('data-product-id', mockProduct.id);
-        // Si ProductDetail necesitara más props, haríamos:
-        // expect(detail).toHaveAttribute('data-product-name', mockProduct.name);
-        // expect(detail).toHaveAttribute('data-product-price', String(mockProduct.price));
       });
-    });
-
-    // When: Se renderiza con un objeto product nulo o indefinido (si fuera posible)
-    // Esto es útil si 'product' podría ser opcional
-    describe('When rendered with a null product object', () => {
-      // Simplemente para ilustrar si 'product' pudiera ser opcional
-      // test('Then it should render an empty block', () => {
-      //   render(<ProductInfoBlock product={null as any} />); // Forzando null para el test
-      //   const container = screen.queryByClass('product-info-section');
-      //   expect(container).toBeInTheDocument();
-      //   expect(screen.queryByTestId('mock-product-image-gallery')).not.toBeInTheDocument();
-      //   expect(screen.queryByTestId('mock-product-detail')).not.toBeInTheDocument();
-      // });
     });
   });
 });

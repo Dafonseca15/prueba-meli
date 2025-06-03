@@ -1,6 +1,3 @@
-// src/features/product-detail/components/ProductInfoBlock/ProductDetail/__tests__/ProductDetail.test.tsx
-
-import React from 'react'; // ¡Importante: asegúrate de que sea 'import React from "react";' en tu componente ProductDetail.tsx también!
 import { render, screen } from '@testing-library/react';
 import { ProductDetail } from '../ProductDetail'; // La ruta es correcta desde __tests__
 import type { Product } from '../../../../types/product'; // La ruta a tu tipo Product
