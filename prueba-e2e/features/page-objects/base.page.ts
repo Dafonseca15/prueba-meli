@@ -6,8 +6,6 @@ export default class BasePage {
      */
     public async open(path: string) {
         await browser.url(path);
-        // Maximizar la ventana es una buena práctica para asegurar la visibilidad de elementos
-        // y evitar problemas con elementos ocultos o responsividad.
         await browser.maximizeWindow();
     }
 

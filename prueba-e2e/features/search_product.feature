@@ -1,10 +1,11 @@
- Feature: Search and validate product details on Mercado Libre
+Feature: Search and validate product details on Mercado Libre
 
     As user, I want to search for a product on Google,
     navigate to Mercado Libre, filter by brand,
     and validate the product price on the detail page.
 
     Scenario: Validate product price after filtering by brand
+        Given I open website Google Chrome
         When I search for "Creatina mercado libre"
         And I click on the Mercado Libre link in the search results
         And I handle any cookie banner if it appears

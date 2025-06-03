@@ -27,7 +27,7 @@ class MercadoLibreSearchPage extends BasePage {
         const baseUrl = 'https://listado.mercadolibre.com.co/';
         const searchUrl = `${baseUrl}${searchTerm}`;
         await super.open(searchUrl);
-        console.log(`Mapsd directly to: ${searchUrl}`);
+        // console.log(`Mapsd directly to: ${searchUrl}`);
         await this.waitUntilUrlContains('listado.mercadolibre.com', 20000, 'Failed to open Mercado Libre search results');
     }
 
@@ -49,21 +49,21 @@ class MercadoLibreSearchPage extends BasePage {
     }
 
     public async applyBrandFilter(brand: string) {
-        console.log(`Attempting to apply brand filter: ${brand}`);
+        // console.log(`Attempting to apply brand filter: ${brand}`);
         const filterElement = await this.brandFilterMuscleTech;
         await filterElement.waitForClickable({ timeout: 15000 });
         await filterElement.click();
         const expectedUrlPart = `/${brand.toLowerCase()}/`;
-        console.log(`Waiting for URL to contain: ${expectedUrlPart}`);
+        // console.log(`Waiting for URL to contain: ${expectedUrlPart}`);
         await this.waitUntilUrlContains(expectedUrlPart, 20000, `Failed to apply ${brand} filter or URL did not update as expected.`);
-        console.log(`Brand filter "${brand}" applied successfully.`);
+        // console.log(`Brand filter "${brand}" applied successfully.`);
     }
 
     public async getFirstProductPrice(): Promise<number> {
-        console.log('Attempting to get price of the first product in the list...');
+        // console.log('Attempting to get price of the first product in the list...');
         await this.firstProductPrice.waitForDisplayed({ timeout: 10000 });
         const priceText = await this.firstProductPrice.getText();
-        console.log(`Raw price text from list: "${priceText}"`);
+        // console.log(`Raw price text from list: "${priceText}"`);
         let cleanedPrice = priceText.replace(/\./g, '').replace(',', '.').trim();
         const price = parseFloat(cleanedPrice);
         if (isNaN(price)) {
@@ -74,10 +74,10 @@ class MercadoLibreSearchPage extends BasePage {
     }
 
     public async clickFirstProduct() {
-        console.log('Attempting to click on the first product in the list...');
+        // console.log('Attempting to click on the first product in the list...');
         await this.firstProductInList.waitForClickable({ timeout: 15000 });
         await this.firstProductInList.click();
-        console.log('Clicked on the first product in the list.');
+        // console.log('Clicked on the first product in the list.');
     }
 }
 
