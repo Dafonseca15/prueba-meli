@@ -70,6 +70,14 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
 ---
 
+## 🧪 Estrategia de Pruebas
+* Las pruebas end-to-end (E2E) están implementadas usando WebdriverIO + Cucumber.
+* Se encuentran en la carpeta raíz /prueba-e2e/ y automatizan flujos reales de búsqueda en Google y navegación por MercadoLibre.
+* Las pruebas se ejecutan en Chrome y validan elementos críticos como:
+   * Aplicación de filtros.
+   * Comparación de precios entre resultados y página de detalle.
+   * Flujo completo de navegación simulado por el usuario.
+
 ## 🏃‍♀️ Ejecución de Pruebas
 
 Para ejecutar las pruebas End-to-End, utiliza el siguiente comando desde el directorio `prueba-e2e/`:
