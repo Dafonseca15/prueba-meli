@@ -82,9 +82,31 @@ Antes de comenzar, asegúrate de tener instalado lo siguiente:
     ```
 ---
 
+## 🧪 Estrategi de Pruebas
+La estrategia de testing está orientada a asegurar el correcto comportamiento de los componentes de forma aislada, siguiendo el enfoque **TDD/BDD (Test-Driven/Behavior-Driven Development)** en los casos clave.
+
+### 🧩 Pruebas Unitarias
+* Se utilizan Jest como test runner y React Testing Library para testear componentes React.
+* Los tests se enfocan en:
+   * Renderizado condicional y props requeridos.
+   * Comportamiento de componentes ante distintos escenarios.
+   * Validación de estructuras semánticas (accesibilidad).
+   * Mocks de funciones y componentes secundarios.
+
 ## 🏃‍♀️ Ejecución de Pruebas
 
 Para ejecutar las pruebas Unitarias y de componentes, utiliza el siguiente comando desde el directorio `aplicacion-front/`:
 
 ```bash
 npm run test
+```
+
+## 📦 Cobertura
+* La cobertura se evalúa ejecutando:
+```bash
+npm run test:coverage
+```
+* El reporte se genera en la carpeta /coverage y se puede abrir en el navegador:
+```bash
+coverage/lcov-report/index.html
+```
