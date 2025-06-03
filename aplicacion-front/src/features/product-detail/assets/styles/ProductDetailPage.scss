@@ -17,7 +17,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 10px 0px;
-      margin: 0 auto;
+      // margin: 0 auto;
     }
   
     .product-content-wrapper {
@@ -40,7 +40,12 @@
     }
   
     .product-content-wrapper {
-      // flex-direction: column; // Stack elements vertically on small screens
       display: inline !important;
+    }
+
+    @media (max-width: 600px) {
+      .product-breadcrumbs-actions-wrapper {
+        display: none !important;
+      }
     }
 }
