@@ -47,7 +47,7 @@ Sigue estos pasos para configurar y ejecutar las pruebas en tu entorno local.
 
 Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-* **Node.js**: Versión 16.x o superior (se recomienda la última versión LTS).
+* **Node.js**: Versión 22.x o superior (se recomienda la última versión LTS).
     * Verifica tu versión: `node -v`
 * **npm** (Node Package Manager): Se instala automáticamente con Node.js.
     * Verifica tu versión: `npm -v`
@@ -76,3 +76,5 @@ Para ejecutar las pruebas End-to-End, utiliza el siguiente comando desde el dire
 
 ```bash
 npx wdio run ./wdio.conf.ts 
+```
+Al final deberia verse algo asi:
