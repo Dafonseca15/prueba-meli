@@ -77,4 +77,6 @@ Para ejecutar las pruebas End-to-End, utiliza el siguiente comando desde el dire
 ```bash
 npx wdio run ./wdio.conf.ts 
 ```
+
 Al final deberia verse algo asi:
+![Screenshot 2025-06-03 at 12 54 05 AM](https://github.com/user-attachments/assets/6303898c-badf-45fa-be97-890d9efc6562)
