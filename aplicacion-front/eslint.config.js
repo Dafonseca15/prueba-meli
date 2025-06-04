@@ -45,10 +45,7 @@ export default tseslint.config(
       // Reglas de React
       ...react.configs.recommended.rules, // Reglas recomendadas de React
       ...reactHooks.configs.recommended.rules, // Reglas de React Hooks
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
+      'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       'react/react-in-jsx-scope': 'off', // No es necesario con React 17+ y nuevos bundlers
       'react/jsx-uses-react': 'off', // No es necesario con React 17+ y nuevos bundlers
 
@@ -81,5 +78,5 @@ export default tseslint.config(
     rules: {
       'prettier/prettier': 'error',
     },
-  },
+  }
 );

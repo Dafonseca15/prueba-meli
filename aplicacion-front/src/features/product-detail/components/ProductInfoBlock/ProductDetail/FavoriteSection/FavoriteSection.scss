@@ -1,61 +1,58 @@
 .favorite-section-container {
-  
-    &__status-and-favorites {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 10px 0 ;
-      
-      .favorite-section-container__condition,
-      .favorite-section-container__quantity {
-        font-size: 0.8em;
-        color: #777;
-        font-family: Arial, sans-serif;
-        margin-right: 6px;
-      }
-    }
+  &__status-and-favorites {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
 
-    &__like-button {
-        background: none; // Sin fondo
-        border: none; // Sin borde
-        cursor: pointer;
-        padding: 0; // Sin padding
-        margin-left: auto; // Empuja el botón a la derecha
-        display: flex;
-        align-items: center; // Para centrar el ícono si el botón tiene padding
-        outline: none; // Elimina el contorno al hacer clic
-        
-        &:hover {
-            opacity: 0.8; // Pequeño efecto al pasar el mouse
-        }
+    .favorite-section-container__condition,
+    .favorite-section-container__quantity {
+      font-size: 0.8em;
+      color: #777;
+      font-family: Arial, sans-serif;
+      margin-right: 6px;
+    }
+  }
+
+  &__like-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    outline: none;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__like-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%233483fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>'); /* Icono SVG de corazón vacío */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (max-width: 1024px) {
+    &__status-and-favorites {
+      margin-bottom: 8px;
+    }
+    &__condition,
+    &__sold-quantity {
+      font-size: 0.75em;
     }
     &__like-icon {
-        display: inline-block;
-        width: 20px; // Tamaño del corazón
-        height: 20px; // Tamaño del corazón
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%233483fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-heart"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>'); /* Icono SVG de corazón vacío */
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+      width: 18px;
+      height: 18px;
     }
-
-    // Media queries para responsividad (ejemplo)
-    @media (max-width: 1024px) {
-        &__status-and-favorites {
-            margin-bottom: 8px;
-        }
-        &__condition,
-        &__sold-quantity {
-            font-size: 0.75em;
-        }
-        &__like-icon {
-            width: 18px;
-            height: 18px;
-        }
-        &__title {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
+    &__title {
+      font-size: 1.3em;
+      margin-bottom: 10px;
     }
+  }
 }
-  

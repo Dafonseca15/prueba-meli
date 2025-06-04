@@ -1,30 +1,29 @@
-.product-buy-container{
+.product-buy-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem; // Espacio entre elementos principales
+  border: 1px solid #ddd; // Borde alrededor del contenedor
+  border-radius: 8px;
+  padding: 1.2rem 0.85rem; // Espacio interno del contenedor
+
+  &__text-bold {
+    color: black;
+    font-weight: normal;
+  }
+
+  &__seller {
+    color: #3483fa;
+  }
+
+  &__benefits {
     display: flex;
-    flex-direction: column;
-    gap: 0rem; // Espacio entre elementos principales
-    border: 1px solid #ddd; // Borde alrededor del contenedor
-    border-radius: 8px;
-    padding: 1.2rem 0.85rem; // Espacio interno del contenedor
+    gap: 0.5rem; // Espacio entre cada beneficio
+    margin: 0.5rem 0; // Espacio superior para separar de otros elementos
+  }
 
-    &__text-bold {
-        color: black;
-        font-weight: normal;
-    }
-
-    &__seller {
-        color: #3483fa;
-    }
-
-    &__benefits {
-        display: flex;
-        gap: 0.5rem; // Espacio entre cada beneficio
-        margin: 0.5rem 0; // Espacio superior para separar de otros elementos
-    }
-
-    &__icon {
-        width: 14px;
-        height: 14px;
-        margin-right: 0px;
-    }
-
-}   
+  &__icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 0px;
+  }
+}

@@ -1,176 +1,175 @@
-
 {
-    "id": "MLA123456789",
-    "title": "Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM",
-    "condition": "Nuevo",
-    "sold_quantity": 550,
-    "purchase": {
-      "currency": "USD",
-      "amount": 439,
-      "decimals": 0,
-      "original_amount": 491,
-      "discount_percentage": 12,
-      "installments": {
-        "quantity": 10,
-        "amount": 1.914,
-        "rate": 0,
-        "text": "en 3 cuotas de $546.667 sin interés"
+  "id": "MLA123456789",
+  "title": "Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM",
+  "condition": "Nuevo",
+  "sold_quantity": 550,
+  "purchase": {
+    "currency": "USD",
+    "amount": 439,
+    "decimals": 0,
+    "original_amount": 491,
+    "discount_percentage": 12,
+    "installments": {
+      "quantity": 10,
+      "amount": 1.914,
+      "rate": 0,
+      "text": "en 3 cuotas de $546.667 sin interés"
+    },
+    "promotion": {
+      "discount": 10,
+      "tc_agreement": "OCA Blue VISA"
+    }
+  },
+  "stock": 50,
+  "pictures": [
+    "https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_621964-MLA81364948571_122024-F.webp",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_777643-MLA75395342152_042024-F.webp",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_725539-MLA80825742603_112024-F.webp",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_832248-MLA81366749957_122024-F.webp",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_780712-MLA81099188364_122024-F.webp",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_818960-MLA81099131368_122024-F.webp",
+    "https://http2.mlstatic.com/D_NQ_NP_2X_868167-MLA81099064398_122024-F.webp"
+  ],
+  "description": "El Samsung Galaxy A55 5G es un smartphone de alta gama con una impresionante pantalla Super AMOLED de 6.6 pulgadas, procesador Exynos 1480, 8 GB de RAM y 256 GB de almacenamiento. Captura fotos y videos asombrosos con su sistema de cámara triple, incluyendo un lente principal de 50 MP con OIS, ultra gran angular de 12 MP y macro de 5 MP. Su batería de 5000 mAh te acompaña durante todo el día, y cuenta con certificación IP67 para resistencia al agua y al polvo.",
+  "seller_info": {
+    "id": "SELLER123",
+    "nickname": "Samsung",
+    "visitUs": "Visita la tienda oficial de Samsung",
+    "url": "https://www.mercadolibre.com.ar/samsung",
+    "reputation_level": "gold",
+    "sales_completed": 15000
+  },
+  "shipping": {
+    "free_shipping": true,
+    "logistic_type": "FULFILLMENT",
+    "delivery_time_text": "Conoce los tiempos y las formas de envío. Calcular cuándo llega"
+  },
+  "highlights": [
+    "Memoria RAM: 8 GB",
+    "Diseño elegante y duradero",
+    "Cámara potente para fotos y videos de alta calidad",
+    "Batería de larga duración",
+    "Resistencia al agua y al polvo (IP67)"
+  ],
+  "product_features": [
+    {
+      "type": "return",
+      "text": "Devolución gratis. Tienes 30 días desde que lo recibes.",
+      "icon": "🔄"
+    },
+    {
+      "type": "protected_purchase",
+      "text": "Compra Protegida, recibe el producto que esperabas o te devolvemos tu dinero.",
+      "icon": "🛡️"
+    },
+    {
+      "type": "warranty",
+      "text": "1 años de garantía de fábrica.",
+      "icon": "⚙️"
+    }
+  ],
+  "color_options": [
+    {
+      "name": "Azul oscuro",
+      "hex": "#202C5E",
+      "picture": "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp"
+    }
+  ],
+  "interest": {
+    "title": "Tambien puede interesarte:",
+    "items": [
+      {
+        "text": "funda samsung galaxy a55",
+        "url": "/funda-samsung-galaxy-a55"
       },
-      "promotion":{
-        "discount": 10,
-        "tc_agreement": "OCA Blue VISA"
-      }
-    },
-    "stock": 50,
-    "pictures": [
-      "https://http2.mlstatic.com/D_NQ_NP_2X_800035-MLA81367078349_122024-F.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_621964-MLA81364948571_122024-F.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_777643-MLA75395342152_042024-F.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_725539-MLA80825742603_112024-F.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_832248-MLA81366749957_122024-F.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_780712-MLA81099188364_122024-F.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_818960-MLA81099131368_122024-F.webp",
-      "https://http2.mlstatic.com/D_NQ_NP_2X_868167-MLA81099064398_122024-F.webp"
-    ],
-    "description": "El Samsung Galaxy A55 5G es un smartphone de alta gama con una impresionante pantalla Super AMOLED de 6.6 pulgadas, procesador Exynos 1480, 8 GB de RAM y 256 GB de almacenamiento. Captura fotos y videos asombrosos con su sistema de cámara triple, incluyendo un lente principal de 50 MP con OIS, ultra gran angular de 12 MP y macro de 5 MP. Su batería de 5000 mAh te acompaña durante todo el día, y cuenta con certificación IP67 para resistencia al agua y al polvo.",
-    "seller_info": {
-      "id": "SELLER123",
-      "nickname": "Samsung",
-      "visitUs": "Visita la tienda oficial de Samsung",
-      "url": "https://www.mercadolibre.com.ar/samsung",
-      "reputation_level": "gold",
-      "sales_completed": 15000
-    },
-    "shipping": {
-      "free_shipping": true,
-      "logistic_type": "FULFILLMENT",
-      "delivery_time_text": "Conoce los tiempos y las formas de envío. Calcular cuándo llega"
-    },
-    "highlights": [
-      "Memoria RAM: 8 GB",
-      "Diseño elegante y duradero",
-      "Cámara potente para fotos y videos de alta calidad",
-      "Batería de larga duración",
-      "Resistencia al agua y al polvo (IP67)"
-    ],
-    "product_features": [ 
       {
-        "type": "return",
-        "text": "Devolución gratis. Tienes 30 días desde que lo recibes.",
-        "icon": "🔄"
+        "text": "samsung galaxy",
+        "url": "/samsung-galaxy"
       },
       {
-        "type": "protected_purchase",
-        "text": "Compra Protegida, recibe el producto que esperabas o te devolvemos tu dinero.",
-        "icon": "🛡️"
+        "text": "celulares",
+        "url": "/celulares"
       },
       {
-        "type": "warranty",
-        "text": "1 años de garantía de fábrica.",
-        "icon": "⚙️"
-      }
-    ],
-    "color_options": [
+        "text": "samsung a54",
+        "url": "/samsung-a54"
+      },
       {
-        "name": "Azul oscuro",
-        "hex": "#202C5E",
-        "picture": "https://http2.mlstatic.com/D_NQ_NP_667232-MLA75324867498_032024-O.webp"
+        "text": "celulares libres",
+        "url": "/celulares-libres"
+      },
+      {
+        "text": "samsung",
+        "url": "/samsung"
+      },
+      {
+        "text": "samsung galaxy a54",
+        "url": "/samsung-galaxy-a54"
+      }
+    ]
+  },
+  "breadcrumbs": {
+    "items": [
+      {
+        "text": "Volver",
+        "url": "/anterior"
+      },
+      {
+        "text": "Celulares y Telefonia",
+        "url": "/celulares-y-telefonia"
+      },
+      {
+        "text": "Celulares y Smartphones",
+        "url": "/celulares-y-smartphones"
+      },
+      {
+        "text": "Samsung Galaxy",
+        "url": "/celulares-sa"
       }
     ],
-    "interest": {
-      "title": "Tambien puede interesarte:",
-      "items": [
+    "more_actions": {
+      "more_actions": [
         {
-          "text": "funda samsung galaxy a55",
-          "url": "/funda-samsung-galaxy-a55"
+          "type": "want_to_sell",
+          "text": "Vender",
+          "url": "/vender-uno-igual"
         },
         {
-          "text": "samsung galaxy",
-          "url": "/samsung-galaxy"
-        },
-        {
-          "text": "celulares",
-          "url": "/celulares"
-        },
-        {
-          "text": "samsung a54",
-          "url": "/samsung-a54"
-        },
-        {
-          "text": "celulares libres",
-          "url": "/celulares-libres"
-        },
-        {
-          "text": "samsung",
-          "url": "/samsung"
-        },
-        {
-          "text": "samsung galaxy a54",
-          "url": "/samsung-galaxy-a54"
-        }
-      ]
-    },
-    "breadcrumbs": {
-      "items": [
-        {
-          "text": "Volver",
-          "url": "/anterior"
-        },
-        {
-          "text": "Celulares y Telefonia",
-          "url": "/celulares-y-telefonia"
-        },
-        {
-          "text": "Celulares y Smartphones",
-          "url": "/celulares-y-smartphones"
-        },
-        {
-          "text": "Samsung Galaxy",
-          "url": "/celulares-sa"
-        }
-      ],
-      "more_actions": {
-        "more_actions": [
-          {
-            "type": "want_to_sell",
-            "text": "Vender",
-            "url": "/vender-uno-igual"
-          },
-         {
           "type": "share",
           "text": "Compartir",
-          "options":[
-              {
-                "name": "Facebook",
-                "icon": "facebook-icon.png",
-                "url": "https://www.facebook.com/sharer/sharer.php?u=https://www.mercadolibre.com.ar/MLA123456789"
-              },
-              {
-                "name": "Twitter",
-                "icon": "twitter-icon.png",
-                "url": "https://twitter.com/intent/tweet?text=Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM&url=https://www.mercadolibre.com.ar/MLA123456789"
-              },
-              {
-                "name": "WhatsApp",
-                "icon": "whatsapp-icon.png",
-                "url": "https://api.whatsapp.com/send?text=Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM - https://www.mercadolibre.com.ar/MLA123456789"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "badge_info": {
-      "text": "Más vendido",
-      "category_position": "15º",
-      "category_text": "en Celulares y Smartphones Motorola",
-      "category_url": "/celulares-y-smartphones"
-    },
-    "rating": {
-      "average": 4.8,
-      "total_reviews": 1200
-    },
-    "color_selector": [
+          "options": [
+            {
+              "name": "Facebook",
+              "icon": "facebook-icon.png",
+              "url": "https://www.facebook.com/sharer/sharer.php?u=https://www.mercadolibre.com.ar/MLA123456789"
+            },
+            {
+              "name": "Twitter",
+              "icon": "twitter-icon.png",
+              "url": "https://twitter.com/intent/tweet?text=Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM&url=https://www.mercadolibre.com.ar/MLA123456789"
+            },
+            {
+              "name": "WhatsApp",
+              "icon": "whatsapp-icon.png",
+              "url": "https://api.whatsapp.com/send?text=Samsung Galaxy A55 5G Dual SIM 256 GB azul oscuro 8 GB RAM - https://www.mercadolibre.com.ar/MLA123456789"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "badge_info": {
+    "text": "Más vendido",
+    "category_position": "15º",
+    "category_text": "en Celulares y Smartphones Motorola",
+    "category_url": "/celulares-y-smartphones"
+  },
+  "rating": {
+    "average": 4.8,
+    "total_reviews": 1200
+  },
+  "color_selector": [
     {
       "name": "Blanco/Negro",
       "thumbnailUrl": "https://http2.mlstatic.com/D_Q_NP_777643-MLA75395342152_042024-R.webp",
@@ -178,49 +177,49 @@
       "selected": true
     },
     {
-        "name": "Blanco",
-        "thumbnailUrl": "https://http2.mlstatic.com/D_Q_NP_726160-MLA75549316245_042024-R.webp",
-        "value": "verde",
-        "selected": false
+      "name": "Blanco",
+      "thumbnailUrl": "https://http2.mlstatic.com/D_Q_NP_726160-MLA75549316245_042024-R.webp",
+      "value": "verde",
+      "selected": false
     }
-    ],
-    "keyInfo": {
-      "title": "Lo que tienes que saber de este producto",
-      "items": [
-        "Memoria RAM: 8 GB",
-        "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida.",
-        "Memoria interna de 256 GB.",
-        "Memoria RAM: 8 GB",
-        "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida.",
-        "Memoria interna de 256 GB."
-      ]
+  ],
+  "keyInfo": {
+    "title": "Lo que tienes que saber de este producto",
+    "items": [
+      "Memoria RAM: 8 GB",
+      "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida.",
+      "Memoria interna de 256 GB.",
+      "Memoria RAM: 8 GB",
+      "Dispositivo desbloqueado para que elijas tu compañía telefónica preferida.",
+      "Memoria interna de 256 GB."
+    ]
+  },
+  "buy_and_delivery": {
+    "delivery": {
+      "title": "Envío gratis",
+      "description": "Recibí tu producto en la puerta de tu casa sin costo adicional.",
+      "calculate_shipping": "Calcular cuándo llega",
+      "shipping_url": "/shipping-calculator"
     },
-    "buy_and_delivery": {
-      "delivery": {
-        "title": "Envío gratis",
-        "description": "Recibí tu producto en la puerta de tu casa sin costo adicional.",
-        "calculate_shipping": "Calcular cuándo llega",
-        "shipping_url": "/shipping-calculator"
+    "disponibility": {
+      "title": "¡Última disponible!",
+      "stock": "50 unidades disponibles"
+    },
+    "actions": [
+      {
+        "type": "buy_now",
+        "text": "Comprar ahora",
+        "url": "/buy-now",
+        "is_primary": true
       },
-      "disponibility": {
-        "title": "¡Última disponible!",
-        "stock": "50 unidades disponibles"
-      },
-      "actions": [
-        {
-          "type": "buy_now",
-          "text": "Comprar ahora",
-          "url": "/buy-now",
-          "is_primary": true
-        },
-        {
-          "type": "add_to_cart",
-          "text": "Agregar al carrito",
-          "url": "/add-to-cart",
-          "is_primary": false
-        }
-      ],
-      "benefits": [
+      {
+        "type": "add_to_cart",
+        "text": "Agregar al carrito",
+        "url": "/add-to-cart",
+        "is_primary": false
+      }
+    ],
+    "benefits": [
       {
         "icon": "return",
         "text": "Devolución gratis.",
@@ -236,5 +235,5 @@
         "text": "12 meses de garantía de fábrica."
       }
     ]
-    }
   }
+}

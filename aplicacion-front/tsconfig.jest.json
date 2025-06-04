@@ -1,33 +1,33 @@
 // tsconfig.jest.json
 {
-    "extends": "./tsconfig.json", // <-- Asegúrate de que esta ruta sea correcta y única
-    "compilerOptions": {
-      "jsx": "react-jsx",
-      "module": "CommonJS", // Para Jest en Node.js
-      "target": "ES2016",
-      "allowJs": true,
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "skipLibCheck": true,
-      "strict": true,
-      "noEmit": true,
-      "lib": ["DOM", "DOM.Iterable", "ESNext"],
-      "types": ["jest", "node", "@testing-library/jest-dom"] // Añade tipos de Jest y Node
-    },
-    "include": [
-      "src/**/*.ts",
-      "src/**/*.tsx",
-      "jest.setup.js",
-      "jest.config.cjs", // Si lo renombraste a .cjs
-      "**/*.test.ts",
-      "**/*.test.tsx"
-    ],
-    "exclude": [
-      "node_modules",
-      "dist",
-      "build",
-      "**/*.spec.ts",
-      "**/*.spec.tsx",
-      // Aquí NO debes incluir el tsconfig.json padre o sus contenidos
-    ]
-  }
+  "extends": "./tsconfig.json", // <-- Asegúrate de que esta ruta sea correcta y única
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "module": "CommonJS", // Para Jest en Node.js
+    "target": "ES2016",
+    "allowJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "types": ["jest", "node", "@testing-library/jest-dom"] // Añade tipos de Jest y Node
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "jest.setup.js",
+    "jest.config.cjs", // Si lo renombraste a .cjs
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "**/*.spec.ts",
+    "**/*.spec.tsx"
+    // Aquí NO debes incluir el tsconfig.json padre o sus contenidos
+  ]
+}

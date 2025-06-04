@@ -1,21 +1,21 @@
 .sell-share-actions {
-    display: flex;
-    gap: 8px; // Espacio entre los botones
-    font-family: Arial, sans-serif;
-    font-size: 0.85em;
+  display: flex;
+  gap: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 0.85em;
 
-    &__link {
-        color: #3483fa;
-        text-decoration: none;
-        &:hover {
-          text-decoration: none;
-          cursor: pointer;
-        }
+  &__link {
+    color: #3483fa;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
     }
+  }
 
-    .separator::after {
-        content: '|';
-        margin-left: 8px;
-        color: #999;
-    }
+  .separator::after {
+    content: '|';
+    margin-left: 8px;
+    color: #999;
+  }
 }

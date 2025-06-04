@@ -1,95 +1,92 @@
-// src/styles/components/_custom-link.scss
-
 .custom-link {
-    text-decoration: none; // Por defecto sin subrayado
-  
-    // Tipos de enlaces
-    &--type-text {
-      color: #3483fa; // Color azul de Mercado Libre para enlaces de texto
-      font-size: 0.875rem; // Tamaño predeterminado para enlaces de texto
-      
-      // Subrayado para tipo 'text'
-      &.custom-link--underline-always {
-        text-decoration: underline;
-      }
-      &.custom-link--underline-hover {
-        &:hover {
-          text-decoration: none;
-        }
-      }
-      &.custom-link--underline-none {
-        text-decoration: none;
-      }
+  text-decoration: none;
+  &--type-text {
+    color: #3483fa;
+    font-size: 0.875rem;
+    &.custom-link--underline-always {
+      text-decoration: underline;
     }
-  
-    &--type-primary {
-      background-color: #3483fa; // Azul de botón principal
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      display: inline-block; // Para que el padding y margen funcionen correctamente
-      text-align: center;
-      cursor: pointer;
-      border: 1px solid transparent; // Borde transparente para mantener el tamaño al hover
-  
+    &.custom-link--underline-hover {
       &:hover {
-        background-color: adjust(#3483fa, 10%);
-      }
-  
-      // Subrayado no relevante para botones, pero puedes mantenerlo si lo necesitas
-      &.custom-link--underline-always,
-      &.custom-link--underline-hover,
-      &.custom-link--underline-none {
         text-decoration: none;
       }
     }
-  
-    &--type-secondary {
-      background-color: #fff;
-      color: #3483fa;
-      border: 1px solid #3483fa;
-      padding: 0.75rem 1.5rem;
-      border-radius: 4px;
-      display: inline-block;
-      text-align: center;
-      cursor: pointer;
-  
-      &:hover {
-        background-color: #f0f8ff; // Un azul muy claro al hacer hover
-      }
-  
-      // Subrayado no relevante para botones
-      &.custom-link--underline-always,
-      &.custom-link--underline-hover,
-      &.custom-link--underline-none {
-        text-decoration: none;
-      }
+    &.custom-link--underline-none {
+      text-decoration: none;
     }
-  
-    // Tamaños para tipos 'button' o 'primary'/'secondary'
-    &--size-xs {
-      font-size: 0.75rem;
-    //   padding: 0.5rem 1rem;
-    }
-    &--size-sm {
-      font-size: 0.875rem;
-    //   padding: 0.625rem 1.25rem;
-    }
-    &--size-md {
-      font-size: 1rem;
-    //   padding: 0.75rem 1.5rem;
-    }
-    &--size-lg {
-      font-size: 1.125rem;
-    //   padding: 1rem 2rem;
-    }
-  
-    // Pesos de la fuente (igual que en CustomTitle)
-    &--bold-light { font-weight: 300; }
-    &--bold-normal { font-weight: 400; }
-    &--bold-medium { font-weight: 500; }
-    &--bold-semibold { font-weight: 600; }
-    &--bold-bold { font-weight: 700; }
-    &--bold-extrabold { font-weight: 800; }
-  
   }
+
+  &--type-primary {
+    background-color: #3483fa;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+
+    &:hover {
+      background-color: adjust(#3483fa, 10%);
+    }
+
+    &.custom-link--underline-always,
+    &.custom-link--underline-hover,
+    &.custom-link--underline-none {
+      text-decoration: none;
+    }
+  }
+
+  &--type-secondary {
+    background-color: #fff;
+    color: #3483fa;
+    border: 1px solid #3483fa;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f8ff;
+    }
+
+    &.custom-link--underline-always,
+    &.custom-link--underline-hover,
+    &.custom-link--underline-none {
+      text-decoration: none;
+    }
+  }
+
+  &--size-xs {
+    font-size: 0.75rem;
+  }
+  &--size-sm {
+    font-size: 0.875rem;
+  }
+  &--size-md {
+    font-size: 1rem;
+  }
+  &--size-lg {
+    font-size: 1.125rem;
+  }
+
+  &--bold-light {
+    font-weight: 300;
+  }
+  &--bold-normal {
+    font-weight: 400;
+  }
+  &--bold-medium {
+    font-weight: 500;
+  }
+  &--bold-semibold {
+    font-weight: 600;
+  }
+  &--bold-bold {
+    font-weight: 700;
+  }
+  &--bold-extrabold {
+    font-weight: 800;
+  }
+}

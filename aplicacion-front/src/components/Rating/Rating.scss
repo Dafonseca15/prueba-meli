@@ -1,68 +1,60 @@
 .rating__container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px; // Espacio debajo de esta sección
-    font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-family: Arial, sans-serif;
 }
 
 .rating__average {
-    font-size: 0.9em; // Tamaño de fuente para el número 4.9
-    color: #777; // Color gris similar al de MercadoLibre
-    font-weight: normal;
-    margin-right: 5px; // Espacio entre el número y las estrellas
+  font-size: 0.9em;
+  color: #777;
+  font-weight: normal;
+  margin-right: 5px;
 }
 
 .rating__stars {
-    display: flex;
-    align-items: center;
-    margin-right: 8px; // Espacio entre las estrellas y el contador
-  }
-
-.rating__star {
-    display: inline-block;
-    width: 16px; // Tamaño de cada estrella
-    height: 16px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-right: 2px; // Pequeño espacio entre estrellas
-
-    &--full {
-      // Estrella completa azul
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233483fa"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
-    }
-
-    &--half {
-      // Media estrella (para calificaciones como 4.5, 3.5, etc.)
-      // Este SVG representa la mitad de una estrella rellenada.
-      // Puedes ajustarlo para que sea la mitad izquierda o derecha.
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233483fa"><path d="M12 2l-2.4 7.2L2 9.24l5.46 4.73L5.82 21L12 17.27V2z"/></svg>');
-    }
-
-    &--empty {
-      // Estrella vacía (contorno)
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.27 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>');
-    }
-  }
-
-.rating__count {
-    font-size: 0.85em; // Tamaño de fuente para el número de opiniones
-    color: #777; // Color gris
-    font-weight: normal;
+  display: flex;
+  align-items: center;
+  margin-right: 8px;
 }
 
-// Media queries para responsividad (ejemplo)
-@media (max-width: 1024px) {
-    // margin-bottom: 10px;
+.rating__star {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 2px;
 
-    .rating__average {
-      font-size: 0.8em;
-    }
-    .rating__star {
-      width: 14px;
-      height: 14px;
-    }
-    .rating__count {
-      font-size: 0.8em;
-    }
+  &--full {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233483fa"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>');
   }
+
+  &--half {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233483fa"><path d="M12 2l-2.4 7.2L2 9.24l5.46 4.73L5.82 21L12 17.27V2z"/></svg>');
+  }
+
+  &--empty {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23ccc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.27 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>');
+  }
+}
+
+.rating__count {
+  font-size: 0.85em;
+  color: #777;
+  font-weight: normal;
+}
+
+@media (max-width: 1024px) {
+  .rating__average {
+    font-size: 0.8em;
+  }
+  .rating__star {
+    width: 14px;
+    height: 14px;
+  }
+  .rating__count {
+    font-size: 0.8em;
+  }
+}

@@ -2,7 +2,9 @@
 @use './_variables.scss'; // Importa tus variables SCSS
 
 /* Reset Básico */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;

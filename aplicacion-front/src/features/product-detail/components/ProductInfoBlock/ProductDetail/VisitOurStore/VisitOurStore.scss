@@ -1,34 +1,33 @@
 .visit-our-store {
-display: flex;
-  align-items: center; 
+  display: flex;
+  align-items: center;
   gap: 10px;
-  background-color: #fff; 
+  background-color: #fff;
   font-size: 0.95em;
 
   &__link {
-    display: flex; 
-    text-decoration: none; 
+    display: flex;
+    text-decoration: none;
     color: #3483fa;
     font-size: 0.95em;
     align-items: center;
-      .logo {
-        width: 24px;
-        height: 24px;
-        object-fit: contain;
-        margin-right: 10px;
-        border-radius: 4px;
+    .logo {
+      width: 24px;
+      height: 24px;
+      object-fit: contain;
+      margin-right: 10px;
+      border-radius: 4px;
     }
     &__verified {
-      display: inline-block; // Permite aplicar ancho y alto
-      width: 14px; // Tamaño del icono de verificación [cite: 1]
-      height: 14px; // Tamaño del icono de verificación [cite: 1]
-      margin-left: 8px; // Espacio entre el texto y el icono [cite: 1]
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-left: 8px;
 
-      // Aquí es donde se define el icono del "chulo"
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233483fa"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>'); /* Icono SVG de checkmark */
-      background-size: contain; // Asegura que el SVG se ajuste al tamaño del span [cite: 1]
-      background-repeat: no-repeat; // Evita la repetición del icono [cite: 1]
-      background-position: center; // Centra el icono dentro del span [cite: 1]
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
   }
 }

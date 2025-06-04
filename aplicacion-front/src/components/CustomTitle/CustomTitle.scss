@@ -1,80 +1,99 @@
-// Definición de variables de tamaño de fuente
 $font-sizes: (
-  xs: 0.75rem,  // ~12px
-  sm: 0.875rem, // ~14px
-  md: 1rem,     // ~16px (base)
-  lg: 1.125rem, // ~18px
-  xl: 1.25rem,  // ~20px
-  2xl: 1.5rem,  // ~24px
-  3xl: 1.875rem, // ~30px
-  4xl: 2.25rem  // ~36px
+  xs: 0.75rem,
+  sm: 0.875rem,
+  md: 1rem,
+  lg: 1.125rem,
+  xl: 1.25rem,
+  2xl: 1.5rem,
+  3xl: 1.875rem,
+  4xl: 2.25rem,
 );
 
-// Definición de variables de peso de fuente
 $font-weights: (
   light: 300,
   normal: 400,
   medium: 500,
   semibold: 600,
   bold: 700,
-  extrabold: 800
+  extrabold: 800,
 );
 
-// Mixin para aplicar el tamaño de fuente
 @mixin font-size($size) {
   @if map-has-key($font-sizes, $size) {
     font-size: map-get($font-sizes, $size);
   } @else {
-    font-size: $size; // Permite pasar un valor explícito si no está en el mapa
+    font-size: $size;
     @warn "Tamaño de fuente '#{$size}' no definido en $font-sizes. Usando el valor directamente.";
   }
 }
 
-// Mixin para aplicar el peso de fuente
 @mixin font-weight($weight) {
   @if map-has-key($font-weights, $weight) {
     font-weight: map-get($font-weights, $weight);
   } @else {
-    font-weight: $weight; // Permite pasar un valor explícito si no está en el mapa
+    font-weight: $weight;
     @warn "Peso de fuente '#{$weight}' no definido en $font-weights. Usando el valor directamente.";
   }
 }
 
 .custom-title {
-  margin: 0; // Reset de margen por defecto para consistencia
+  margin: 0;
   padding: 0;
-  line-height: 1.2; // Ajuste de line-height
+  line-height: 1.2;
 
-  // Mapeo de estilos para diferentes niveles HTML (opcional, si quieres estilos por defecto por nivel)
-  &--level-h1 { @include font-size(2xl); font-weight: bold; }
-  &--level-h2 { @include font-size(xl); font-weight: semibold; }
-  &--level-h3 { @include font-size(lg); font-weight: medium; }
-  &--level-h4 { @include font-size(md); }
-  &--level-h5 { @include font-size(sm); }
-  &--level-h6 { @include font-size(xs); }
-  &--level-p { @include font-size(md); }
-  &--level-span { @include font-size(md); display: inline-block; } // span puede necesitar display block/inline-block
+  &--level-h1 {
+    @include font-size(2xl);
+    font-weight: bold;
+  }
+  &--level-h2 {
+    @include font-size(xl);
+    font-weight: semibold;
+  }
+  &--level-h3 {
+    @include font-size(lg);
+    font-weight: medium;
+  }
+  &--level-h4 {
+    @include font-size(md);
+  }
+  &--level-h5 {
+    @include font-size(sm);
+  }
+  &--level-h6 {
+    @include font-size(xs);
+  }
+  &--level-p {
+    @include font-size(md);
+  }
+  &--level-span {
+    @include font-size(md);
+    display: inline-block;
+  }
 
-  // Aplicación de tamaños basados en la prop 'size'
   @each $key, $value in $font-sizes {
     &--size-#{$key} {
       @include font-size($key);
     }
   }
 
-  // Aplicación de pesos de fuente basados en la prop 'bold'
   @each $key, $value in $font-weights {
     &--bold-#{$key} {
       @include font-weight($key);
     }
   }
 
-  // Alineación del texto
-  &--align-left { text-align: left; }
-  &--align-center { text-align: center; }
-  &--align-right { text-align: right; }
-  &--align-justify { text-align: justify; }
+  &--align-left {
+    text-align: left;
+  }
+  &--align-center {
+    text-align: center;
+  }
+  &--align-right {
+    text-align: right;
+  }
+  &--align-justify {
+    text-align: justify;
+  }
 
-  // Considera un default color si no se pasa nada
-  color: #333; // Color de texto por defecto
+  color: #333;
 }

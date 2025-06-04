@@ -1,51 +1,51 @@
 // src/features/product-detail/assets/styles/ProductDetailPage.scss
 
 .product-detail-page {
-    margin: 20px auto;
-    padding: 20px 70px;
-    font-family: Arial, sans-serif;
-    color: #333;
-    flex: 1;
-    flex-direction: column;
+  margin: 20px auto;
+  padding: 20px 70px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  flex: 1;
+  flex-direction: column;
 
-    .product-detail-error {
-      color: #d32f2f; // Rojo para errores
-    }
+  .product-detail-error {
+    color: #d32f2f; // Rojo para errores
+  }
 
+  .product-breadcrumbs-actions-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+    // margin: 0 auto;
+  }
+
+  .product-content-wrapper {
+    display: grid;
+    grid-template-columns: 2.2fr 0.8fr; // Dos columnas, la segunda el doble de ancha
+    gap: 30px; // Espacio entre las secciones de imágenes e información
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .product-detail-page {
+    padding: 0 15px;
+    grid-template-columns: 1;
+    display: flex;
+  }
+
+  .product-content-wrapper {
+    display: inline !important;
+  }
+
+  @media (max-width: 600px) {
     .product-breadcrumbs-actions-wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0px;
-      // margin: 0 auto;
-    }
-  
-    .product-content-wrapper {
-      display: grid;
-      grid-template-columns: 2.2fr 0.8fr; // Dos columnas, la segunda el doble de ancha
-      gap: 30px; // Espacio entre las secciones de imágenes e información
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.1);
+      display: none !important;
     }
   }
-  
-  /* Responsive adjustments */
-  @media (max-width: 1024px) {
-    .product-detail-page {
-      padding: 0 15px;
-      grid-template-columns: 1;
-      display: flex;
-    }
-  
-    .product-content-wrapper {
-      display: inline !important;
-    }
-
-    @media (max-width: 600px) {
-      .product-breadcrumbs-actions-wrapper {
-        display: none !important;
-      }
-    }
 }

@@ -1,67 +1,68 @@
 .product-color-selector {
-    font-family: Arial, sans-serif;
-  
-    &__label {
-      font-size: 0.9em;
-      color: #333;
-      margin-bottom: 10px;
-      font-weight: normal; // ML suele usar texto normal para la etiqueta "Color:"
+  font-family: Arial, sans-serif;
+
+  &__label {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+
+  &__selected-name {
+    font-weight: bold;
+    color: #343434;
+  }
+
+  &__options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__thumbnail {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background-color: #fff;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
-  
-    &__selected-name {
-      font-weight: bold; // El nombre del color (ej. "Blanco/Negro") en negrita
-      color: #343434; // Azul de MercadoLibre
+
+    &--selected {
+      border: 2px solid #3483fa;
+      box-shadow: 0 0 0 2px rgba(52, 131, 250, 0.3);
     }
-  
-    &__options {
-      display: flex;
-      flex-wrap: wrap; // Permite que las miniaturas se envuelvan a la siguiente línea
-      gap: 10px; // Espacio entre las miniaturas
-    }
-  
-    &__thumbnail {
-      width: 50px; // Tamaño de la miniatura
-      height: 50px; // Tamaño de la miniatura
-      border: 1px solid #ccc; // Borde gris por defecto
-      border-radius: 4px; // Bordes ligeramente redondeados
-      cursor: pointer;
-      overflow: hidden; // Asegura que la imagen no se salga
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0; // Quita padding por defecto del botón
-      background-color: #fff; // Fondo blanco para las miniaturas
-      transition: border-color 0.2s ease, box-shadow 0.2s ease; // Transición suave
-  
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; // Asegura que la imagen se ajuste y cubra el área
-        display: block; // Elimina espacio extra debajo de la imagen
-      }
-  
-      &--selected {
-        border: 2px solid #3483fa; // Borde azul de selección de MercadoLibre
-        box-shadow: 0 0 0 2px rgba(52, 131, 250, 0.3); // Sombra azul sutil
-      }
-  
-      &:hover:not(&--selected) {
-        border-color: #999; // Borde ligeramente más oscuro al pasar el mouse si no está seleccionado
-      }
-    }
-  
-    // Media queries para responsividad
-    @media (max-width: 1024px) {
-      margin-top: 15px;
-      margin-bottom: 15px;
-  
-      &__label {
-        font-size: 0.85em;
-      }
-  
-      &__thumbnail {
-        width: 45px;
-        height: 45px;
-      }
+
+    &:hover:not(&--selected) {
+      border-color: #999;
     }
   }
+
+  @media (max-width: 1024px) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    &__label {
+      font-size: 0.85em;
+    }
+
+    &__thumbnail {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
