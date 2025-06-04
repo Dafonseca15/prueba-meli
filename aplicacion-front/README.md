@@ -61,7 +61,7 @@ Sigue estos pasos para poner en marcha el proyecto en tu entorno local.
 
 Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-* **Node.js**: Versión 18.x o superior (se recomienda la última versión LTS).
+* **Node.js**: Versión 22.x o superior (se recomienda la última versión LTS).
     * Verifica tu versión: `node -v`
 * **npm** (Node Package Manager): Se instala automáticamente con Node.js.
     * Verifica tu versión: `npm -v`

@@ -1,4 +1,4 @@
-prueba E2E# Automatización de Pruebas E2E para Mercado Libre
+## Automatización de Pruebas E2E
 
 Este proyecto contiene un conjunto de pruebas End-to-End (E2E) automatizadas utilizando **WebdriverIO** con **Cucumber** para verificar la funcionalidad de búsqueda, filtrado y validación de precios en el sitio de Mercado Libre.
 
