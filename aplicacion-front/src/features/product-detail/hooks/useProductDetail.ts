@@ -25,8 +25,8 @@ export const useProductDetails = (productId: string): useProductDetailsProps => 
       return;
     }
 
-    setLoading(true); // Siempre que cambie el ID, volvemos a cargar
-    setError(null); // Limpiamos errores anteriores
+    setLoading(true);
+    setError(null);
 
     const getProduct = async () => {
       try {

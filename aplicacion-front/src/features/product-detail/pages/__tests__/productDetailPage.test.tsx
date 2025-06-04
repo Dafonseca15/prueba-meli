@@ -1,21 +1,23 @@
 import { render, screen } from '@testing-library/react';
-import { ProductDetailPage } from '../ProductDetailPage';
+import { ProductDetailPage } from '../productDetailPage';
 import type { Product } from '../../types/product';
+import { useParams } from 'react-router-dom';
+import { useProductDetails } from '../../hooks/useProductDetail';
+import { ProductInfoBlock } from '../../components/ProductInfoBlock/ProductInfoBlock';
+import { ProductInterestRow } from '../../../../components/ProductInterestRow/ProductInterestRow';
+import { Breadcrumbs } from '../../../../components/Breadcrumbs/Breadcrumbs';
+import { SellShareActions } from '../../../../components/sellShareActions/sellShareActions';
+import { ProductInfoRight } from '../../components/ProductInfoRight/ProductInfoRight';
 
-// --- MOCKS DE HOOKS Y COMPONENTES HIJOS ---
-
-// Mock para useParams de react-router-dom
 jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'), // Mantiene otras exportaciones reales si las hay
-  useParams: jest.fn(), // Mockea useParams
+  ...jest.requireActual('react-router-dom'),
+  useParams: jest.fn(),
 }));
 
-// Mock para useProductDetails (tu custom hook)
 jest.mock('../../hooks/useProductDetail', () => ({
-  useProductDetails: jest.fn(), // Mockea useProductDetails
+  useProductDetails: jest.fn(),
 }));
 
-// Mocks para los componentes hijos
 jest.mock('../../components/ProductInfoBlock/ProductInfoBlock', () => ({
   ProductInfoBlock: jest.fn(({ product }) => (
     <div data-testid="mock-ProductInfoBlock" data-product-id={product?.id}>
@@ -56,20 +58,7 @@ jest.mock('../../components/ProductInfoRight/ProductInfoRight', () => ({
   )),
 }));
 
-// Importa los mocks para poder limpiarlos en beforeEach
-import { useParams } from 'react-router-dom';
-import { useProductDetails } from '../../hooks/useProductDetail';
-import { ProductInfoBlock } from '../../components/ProductInfoBlock/ProductInfoBlock';
-import { ProductInterestRow } from '../../../../components/ProductInterestRow/ProductInterestRow';
-import { Breadcrumbs } from '../../../../components/Breadcrumbs/Breadcrumbs';
-import { SellShareActions } from '../../../../components/sellShareActions/sellShareActions';
-import { ProductInfoRight } from '../../components/ProductInfoRight/ProductInfoRight';
-
-// --- FIN DE MOCKS ---
-
-// Feature: Product Detail Page Display
 describe('Feature: Product Detail Page Display', () => {
-  // Datos de prueba para un objeto Product completo
   const mockProductFull: Product = {
     id: 'MLA123456789',
     title: 'iPhone 15 Pro Max',
@@ -79,9 +68,9 @@ describe('Feature: Product Detail Page Display', () => {
     pictures: [{ url: 'pic1.jpg' }],
     breadcrumbs: {
       items: [{ id: 'cat1', name: 'Celulares' }],
-      more_actions: { more_actions: [{ label: 'Share', url: '#' }] }, // Asegúrate de que esta estructura exista
+      more_actions: { more_actions: [{ label: 'Share', url: '#' }] },
     },
-    more_actions: [], // Si existe en tu Product type
+    more_actions: [],
     seller_info: {
       name: 'Apple Store',
       url: '#',
@@ -100,7 +89,7 @@ describe('Feature: Product Detail Page Display', () => {
       actions: [{ text: 'Comprar', url: '#', is_primary: true }],
       benefits: null,
     },
-    interest: { title: 'También te puede interesar', items: [{ id: 'item1', title: 'Accesorio' }] }, // Asegúrate de que esta estructura exista
+    interest: { title: 'También te puede interesar', items: [{ id: 'item1', title: 'Accesorio' }] },
     condition: 'new',
     sold_quantity: 100,
     badge_info: null,
@@ -118,18 +107,16 @@ describe('Feature: Product Detail Page Display', () => {
     keyInfo: null,
   };
 
-  // Datos de prueba para un objeto Product mínimo (sin secciones opcionales)
   const mockProductMinimal: Product = {
-    ...mockProductFull, // Copia las propiedades obligatorias
+    ...mockProductFull,
     breadcrumbs: {
-      items: [], // Vacío
-      more_actions: { more_actions: [] }, // Vacío
+      items: [],
+      more_actions: { more_actions: [] },
     },
-    interest: undefined, // No interest section
+    interest: undefined,
   };
 
   beforeEach(() => {
-    // Limpia las llamadas a todos los mocks antes de cada test
     (useParams as jest.Mock).mockClear();
     (useProductDetails as jest.Mock).mockClear();
     (ProductInfoBlock as jest.Mock).mockClear();
@@ -138,20 +125,17 @@ describe('Feature: Product Detail Page Display', () => {
     (SellShareActions as jest.Mock).mockClear();
     (ProductInfoRight as jest.Mock).mockClear();
 
-    // Por defecto, mockeamos useParams para devolver un ID
     (useParams as jest.Mock).mockReturnValue({ id: 'test-product-id' });
   });
 
-  // Scenario: Displaying loading state
   describe('Scenario: Displaying loading state', () => {
-    // Given: useProductDetails indicates loading: true
     beforeEach(() => {
       (useProductDetails as jest.Mock).mockReturnValue({
         product: null,
         loading: true,
         error: null,
       });
-      // When: The ProductDetailPage component is rendered
+
       render(<ProductDetailPage />);
     });
 
@@ -171,17 +155,16 @@ describe('Feature: Product Detail Page Display', () => {
     });
   });
 
-  // Scenario: Displaying error message
   describe('Scenario: Displaying error message', () => {
     const errorMessage = 'Algo salió mal.';
-    // Given: useProductDetails indicates error: "some error message"
+
     beforeEach(() => {
       (useProductDetails as jest.Mock).mockReturnValue({
         product: null,
         loading: false,
         error: errorMessage,
       });
-      // When: The component is rendered
+
       render(<ProductDetailPage />);
     });
 
@@ -197,16 +180,14 @@ describe('Feature: Product Detail Page Display', () => {
     });
   });
 
-  // Scenario: Displaying "Product not found"
   describe("Scenario: Displaying 'Product not found'", () => {
-    // Given: useProductDetails returns product: null
     beforeEach(() => {
       (useProductDetails as jest.Mock).mockReturnValue({
         product: null,
         loading: false,
         error: null,
       });
-      // When: The component is rendered
+
       render(<ProductDetailPage />);
     });
 
@@ -222,21 +203,18 @@ describe('Feature: Product Detail Page Display', () => {
     });
   });
 
-  // Scenario: Displaying full product details
   describe('Scenario: Displaying full product details', () => {
-    // Given: useProductDetails returns a mockProductFull
     beforeEach(() => {
       (useProductDetails as jest.Mock).mockReturnValue({
         product: mockProductFull,
         loading: false,
         error: null,
       });
-      // When: The component is rendered
+
       render(<ProductDetailPage />);
     });
 
     it('Then: the main product detail page container should be present', () => {
-      // We find data-testid="product-detail-page" al div principal en ProductDetailPage.tsx
       expect(screen.getByTestId('product-detail-page')).toBeInTheDocument();
       expect(screen.getByTestId('product-detail-page')).toHaveClass('product-detail-page');
     });
@@ -247,7 +225,7 @@ describe('Feature: Product Detail Page Display', () => {
           title: mockProductFull.interest?.title,
           items: mockProductFull.interest?.items,
         }),
-        undefined // Segundo argumento para mocks de componentes funcionales
+        undefined
       );
       expect(screen.getByTestId('mock-ProductInterestRow')).toBeInTheDocument();
       expect(screen.getByTestId('mock-ProductInterestRow')).toHaveAttribute(
@@ -323,16 +301,14 @@ describe('Feature: Product Detail Page Display', () => {
     });
   });
 
-  // Scenario: Displaying minimal product details (conditional rendering checks)
   describe('Scenario: Displaying minimal product details', () => {
-    // Given: useProductDetails returns a mockProductMinimal
     beforeEach(() => {
       (useProductDetails as jest.Mock).mockReturnValue({
         product: mockProductMinimal,
         loading: false,
         error: null,
       });
-      // When: The component is rendered
+
       render(<ProductDetailPage />);
     });
 

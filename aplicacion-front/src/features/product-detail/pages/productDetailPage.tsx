@@ -21,8 +21,6 @@ export const ProductDetailPage = () => {
     return <div>Producto no encontrado.</div>;
   }
 
-  // console.log("ProductDetailPage - product:", product);
-
   return (
     <div className="product-detail-page" data-testid="product-detail-page">
       {/* 1. Fila - Tambien te puede interesar */}

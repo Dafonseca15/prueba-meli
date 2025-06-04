@@ -1,16 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import { ProductInfoRight } from '../ProductInfoRight'; // Ruta a tu componente ProductInfoRight
-import type { Product } from '../../../types/product'; // Ruta a tu tipo Product
+import { ProductInfoRight } from '../ProductInfoRight';
+import type { Product } from '../../../types/product';
+import { ProductBuy } from '../ProductBuy/ProductBuy';
 
-// --- MOCKS DE COMPONENTES HIJOS ---
-
-// Mock para ProductBuy
-// Usamos jest.fn() para poder inspeccionar las props pasadas.
 jest.mock('../ProductBuy/ProductBuy', () => ({
   ProductBuy: jest.fn(({ buy_and_delivery, seller }) => (
     <div
       data-testid="mock-ProductBuy"
-      data-delivery-title={buy_and_delivery?.delivery?.title} // Ejemplo de prop para verificar
+      data-delivery-title={buy_and_delivery?.delivery?.title}
       data-seller-nickname={seller}
     >
       Mock ProductBuy Content
@@ -18,14 +15,7 @@ jest.mock('../ProductBuy/ProductBuy', () => ({
   )),
 }));
 
-// Importa el mock de ProductBuy para poder limpiarlo en beforeEach
-import { ProductBuy } from '../ProductBuy/ProductBuy';
-
-// --- FIN DE MOCKS ---
-
-// Feature: Displaying Product Information on the Right Side
 describe('Feature: Displaying Product Information on the Right Side', () => {
-  // Datos de prueba para un objeto Product completo
   const mockProduct: Product = {
     id: 'prod123',
     title: 'Awesome Product',
@@ -39,11 +29,10 @@ describe('Feature: Displaying Product Information on the Right Side', () => {
       name: 'Awesome Seller',
       url: '/seller-url',
       rating: 4.9,
-      nickname: 'AwesomeNick', // Asegúrate de que esta propiedad exista en tu tipo SellerInfo
+      nickname: 'AwesomeNick',
       visitUs: 'Visit our store!',
     },
     buy_and_delivery: {
-      // Asegúrate de que esta estructura coincida con tu tipo BuyAndDelivery
       delivery: {
         title: 'Envío Rápido',
         description: 'Llega en 2 días',
@@ -74,22 +63,17 @@ describe('Feature: Displaying Product Information on the Right Side', () => {
   };
 
   beforeEach(() => {
-    // Limpia las llamadas al mock de ProductBuy antes de cada test
     (ProductBuy as jest.Mock).mockClear();
   });
 
-  // Scenario: Component renders with a complete product object
   describe('Scenario: Component renders with a complete product object', () => {
-    // Given: A ProductInfoRight component with a product object containing buy_and_delivery and seller_info.nickname
     const componentProps = { product: mockProduct };
 
     beforeEach(() => {
-      // When: The component is rendered
       render(<ProductInfoRight {...componentProps} />);
     });
 
     it('Then: the ProductBuy component should be rendered', () => {
-      // El ProductBuy mockeado debería estar en el documento
       expect(screen.getByTestId('mock-ProductBuy')).toBeInTheDocument();
     });
 
@@ -97,11 +81,11 @@ describe('Feature: Displaying Product Information on the Right Side', () => {
       expect(ProductBuy).toHaveBeenCalledWith(
         expect.objectContaining({
           buy_and_delivery: mockProduct.buy_and_delivery,
-          seller: mockProduct.seller_info.nickname, // Espera ambas props en el mismo objeto
+          seller: mockProduct.seller_info.nickname,
         }),
         undefined
       );
-      // Las aserciones de `toHaveAttribute` en el mock renderizado siguen siendo válidas
+
       expect(screen.getByTestId('mock-ProductBuy')).toHaveAttribute(
         'data-delivery-title',
         mockProduct.buy_and_delivery.delivery.title
@@ -113,47 +97,35 @@ describe('Feature: Displaying Product Information on the Right Side', () => {
     });
   });
 
-  // Scenario: Component renders without required seller_info.nickname or buy_and_delivery
-  // This scenario tests error handling or fallback if these props are missing.
-  // NOTE: Your component currently does not have explicit error handling for missing
-  // product.seller_info.nickname or product.buy_and_delivery.
-  // If these are always guaranteed to exist based on your API, this scenario might be less critical.
-  // However, if they *can* be missing, you'd need to add error boundaries or conditional rendering
-  // in ProductInfoRight to handle it gracefully.
   describe('Scenario: Component renders with missing data', () => {
-    // Given: A ProductInfoRight component with a product missing seller_info.nickname
     const productMissingNickname: Product = {
       ...mockProduct,
       seller_info: {
         ...mockProduct.seller_info,
-        nickname: undefined, // Simulate missing nickname
+        nickname: undefined,
       },
     };
 
-    // Given: A ProductInfoRight component with a product missing buy_and_delivery
     const productMissingBuyAndDelivery: Product = {
       ...mockProduct,
-      buy_and_delivery: undefined as any, // Simulate missing buy_and_delivery
+      buy_and_delivery: undefined as any,
     };
 
     it('When: product.seller_info.nickname is missing, Then: ProductBuy should receive undefined for seller (or handle gracefully)', () => {
-      // If ProductBuy expects a string, passing undefined might cause issues.
-      // This test highlights the need for robust type checking or default values.
       render(<ProductInfoRight product={productMissingNickname} />);
       expect(ProductBuy).toHaveBeenCalledWith(
         expect.objectContaining({
-          seller: undefined, // Expect undefined if nickname is missing
+          seller: undefined,
         }),
         undefined
       );
     });
 
     it('When: product.buy_and_delivery is missing, Then: ProductBuy should receive undefined for buy_and_delivery (or handle gracefully)', () => {
-      // Similar to nickname, if ProductBuy expects a non-nullable object, this could cause errors.
       render(<ProductInfoRight product={productMissingBuyAndDelivery} />);
       expect(ProductBuy).toHaveBeenCalledWith(
         expect.objectContaining({
-          buy_and_delivery: undefined, // Expect undefined if buy_and_delivery is missing
+          buy_and_delivery: undefined,
         }),
         undefined
       );

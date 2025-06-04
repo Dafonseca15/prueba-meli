@@ -6,9 +6,6 @@ import { CustomLink } from '../../../../../../components/CustomLink/CustomLink';
 import { CustomText } from '../../../../../../components/CustomText/CustomText';
 import { CustomTitle } from '../../../../../../components/CustomTitle/CustomTitle';
 
-// --- MOCKS DE COMPONENTES HIJOS Y RECURSOS EXTERNOS ---
-
-// Mock para CustomButton
 jest.mock('../../../../../../components/CustomButton/CustomButton', () => ({
   CustomButton: jest.fn(({ children, onClick, type, size, fullWidth, marginTop }) => (
     <button
@@ -24,7 +21,6 @@ jest.mock('../../../../../../components/CustomButton/CustomButton', () => ({
   )),
 }));
 
-// Mock para CustomLink
 jest.mock('../../../../../../components/CustomLink/CustomLink', () => ({
   CustomLink: jest.fn(({ children, href, size, className }) => (
     <a
@@ -39,7 +35,6 @@ jest.mock('../../../../../../components/CustomLink/CustomLink', () => ({
   )),
 }));
 
-// Mock para CustomText
 jest.mock('../../../../../../components/CustomText/CustomText', () => ({
   CustomText: jest.fn(({ children, as, size, color, className, marginTop, bold }) => (
     <span
@@ -56,7 +51,6 @@ jest.mock('../../../../../../components/CustomText/CustomText', () => ({
   )),
 }));
 
-// Mock para CustomTitle
 jest.mock('../../../../../../components/CustomTitle/CustomTitle', () => ({
   CustomTitle: jest.fn(({ children, level, size, bold, marginBottom, marginTop }) => (
     <h3
@@ -72,26 +66,20 @@ jest.mock('../../../../../../components/CustomTitle/CustomTitle', () => ({
   )),
 }));
 
-// Mocks para las imágenes (para que Jest no intente cargarlas)
 jest.mock('../../../../../../assets/images/ReturnIcon.png', () => 'ReturnIcon.png');
 jest.mock('../../../../../../assets/images/ShieldIcon.png', () => 'ShieldIcon.png');
 jest.mock('../../../../../../assets/images/MedalIcon.png', () => 'MedalIcon.png');
 
-// Mock para window.open
 const mockWindowOpen = jest.fn();
-const originalWindowOpen = window.open; // Guarda el original para restaurar
+const originalWindowOpen = window.open;
 beforeAll(() => {
   window.open = mockWindowOpen;
 });
 afterAll(() => {
-  window.open = originalWindowOpen; // Restaura después de todas las pruebas
+  window.open = originalWindowOpen;
 });
 
-// --- FIN DE MOCKS ---
-
-// Feature: Product Buy and Delivery Details Display
 describe('Feature: Product Buy and Delivery Details Display', () => {
-  // Datos de prueba completos
   const fullBuyAndDeliveryData: BuyAndDeliveryProps = {
     buy_and_delivery: {
       delivery: {
@@ -120,53 +108,45 @@ describe('Feature: Product Buy and Delivery Details Display', () => {
     seller: 'Mercado Libre',
   };
 
-  // Datos de prueba mínimos (para probar renderizado condicional)
   const minimalBuyAndDeliveryData: BuyAndDeliveryProps = {
     buy_and_delivery: {
       delivery: {
         title: 'Envío estándar',
         description: 'Llega en 5 días',
-        calculate_shipping: null, // No calculate shipping link
+        calculate_shipping: null,
         shipping_url: null,
       },
       disponibility: {
         title: 'Últimas unidades',
       },
-      actions: [
-        { text: 'Comprar', url: '/buy', is_primary: true }, // Solo una acción
-      ],
-      benefits: null, // No benefits
+      actions: [{ text: 'Comprar', url: '/buy', is_primary: true }],
+      benefits: null,
     },
     seller: 'Vendedor Individual',
   };
 
   beforeEach(() => {
-    // Limpia las llamadas a todos los mocks antes de cada test
     (CustomButton as jest.Mock).mockClear();
     (CustomLink as jest.Mock).mockClear();
     (CustomText as jest.Mock).mockClear();
     (CustomTitle as jest.Mock).mockClear();
-    mockWindowOpen.mockClear(); // Limpiar el mock de window.open
+    mockWindowOpen.mockClear();
   });
 
-  // Scenario: Component renders with all available data
   describe('Scenario: Component renders with all available data', () => {
-    // Given: A ProductBuy component with full buy_and_delivery and seller data
     const componentProps = fullBuyAndDeliveryData;
 
     beforeEach(() => {
-      // When: The component is rendered
       render(<ProductBuy {...componentProps} />);
     });
 
     it('Then: the main container should be present', () => {
-      // Busca data-testid="product-buy-container" al div principal en ProductBuy.tsx
       expect(screen.getByTestId('product-buy-container')).toBeInTheDocument();
       expect(screen.getByTestId('product-buy-container')).toHaveClass('product-buy-container');
     });
 
     it('And: the delivery section should display correct CustomText and CustomLink', () => {
-      const deliveryTitleText = screen.getAllByTestId('mock-CustomText')[0]; // Primer CustomText
+      const deliveryTitleText = screen.getAllByTestId('mock-CustomText')[0];
       expect(deliveryTitleText).toBeInTheDocument();
       expect(deliveryTitleText).toHaveTextContent(
         `${componentProps.buy_and_delivery.delivery.title} a todo el país`
@@ -175,7 +155,7 @@ describe('Feature: Product Buy and Delivery Details Display', () => {
       expect(deliveryTitleText).toHaveAttribute('data-color', '#00a650');
       expect(deliveryTitleText).toHaveAttribute('data-size', 'md');
 
-      const deliveryDescriptionText = screen.getAllByTestId('mock-CustomText')[1]; // Segundo CustomText
+      const deliveryDescriptionText = screen.getAllByTestId('mock-CustomText')[1];
       expect(deliveryDescriptionText).toBeInTheDocument();
       expect(deliveryDescriptionText).toHaveTextContent(
         componentProps.buy_and_delivery.delivery.description
@@ -212,7 +192,6 @@ describe('Feature: Product Buy and Delivery Details Display', () => {
       const actionButtons = screen.getAllByTestId('mock-CustomButton');
       expect(actionButtons).toHaveLength(componentProps.buy_and_delivery.actions.length);
 
-      // Test "Comprar ahora" button
       const buyNowButton = screen.getByText('Comprar ahora');
       expect(buyNowButton).toBeInTheDocument();
       expect(buyNowButton).toHaveAttribute('data-type', 'primary');
@@ -225,13 +204,12 @@ describe('Feature: Product Buy and Delivery Details Display', () => {
         '_blank'
       );
 
-      // Test "Agregar al carrito" button
       const addToCartButton = screen.getByText('Agregar al carrito');
       expect(addToCartButton).toBeInTheDocument();
       expect(addToCartButton).toHaveAttribute('data-type', 'secondary');
       expect(addToCartButton).toHaveAttribute('data-size', 'sm');
       expect(addToCartButton).toHaveAttribute('data-full-width', 'true');
-      expect(addToCartButton).toHaveAttribute('data-margin-top', '0.5rem'); // marginTop para el segundo botón
+      expect(addToCartButton).toHaveAttribute('data-margin-top', '0.5rem');
       fireEvent.click(addToCartButton);
       expect(mockWindowOpen).toHaveBeenCalledWith(
         componentProps.buy_and_delivery.actions[1].url,
@@ -240,7 +218,7 @@ describe('Feature: Product Buy and Delivery Details Display', () => {
     });
 
     it('And: the seller text should be displayed', () => {
-      const sellerTextElement = screen.getAllByTestId('mock-CustomText')[2]; // Tercer CustomText
+      const sellerTextElement = screen.getAllByTestId('mock-CustomText')[2];
       expect(sellerTextElement).toBeInTheDocument();
       expect(sellerTextElement).toHaveTextContent(`Vendido por ${componentProps.seller}`);
       expect(sellerTextElement).toHaveAttribute('data-size', 'xs');
@@ -248,36 +226,33 @@ describe('Feature: Product Buy and Delivery Details Display', () => {
     });
 
     it('And: all benefits should be rendered with correct icons and text', () => {
-      const benefitElements = screen.getAllByTestId('product-buy-container__benefits-item'); // Necesitas data-testid en el div de beneficio
+      const benefitElements = screen.getAllByTestId('product-buy-container__benefits-item');
       expect(benefitElements).toHaveLength(componentProps.buy_and_delivery.benefits!.length);
 
-      // Test first benefit (ReturnIcon)
       const returnBenefit = benefitElements[0];
       const returnIcon = returnBenefit.querySelector('img');
       expect(returnIcon).toBeInTheDocument();
-      expect(returnIcon).toHaveAttribute('src', 'ReturnIcon.png'); // Mocked image path
+      expect(returnIcon).toHaveAttribute('src', 'ReturnIcon.png');
       expect(returnIcon).toHaveClass('product-buy-container__icon');
       expect(returnBenefit).toHaveTextContent(componentProps.buy_and_delivery.benefits![0].text);
       expect(returnBenefit).toHaveTextContent(
         componentProps.buy_and_delivery.benefits![0].description!
       );
 
-      // Test second benefit (ShieldIcon)
       const shieldBenefit = benefitElements[1];
       const shieldIcon = shieldBenefit.querySelector('img');
       expect(shieldIcon).toBeInTheDocument();
-      expect(shieldIcon).toHaveAttribute('src', 'ShieldIcon.png'); // Mocked image path
+      expect(shieldIcon).toHaveAttribute('src', 'ShieldIcon.png');
       expect(shieldIcon).toHaveClass('product-buy-container__icon');
       expect(shieldBenefit).toHaveTextContent(componentProps.buy_and_delivery.benefits![1].text);
       expect(shieldBenefit).toHaveTextContent(
         componentProps.buy_and_delivery.benefits![1].description!
       );
 
-      // Test third benefit (MedalIcon)
       const medalBenefit = benefitElements[2];
       const medalIcon = medalBenefit.querySelector('img');
       expect(medalIcon).toBeInTheDocument();
-      expect(medalIcon).toHaveAttribute('src', 'MedalIcon.png'); // Mocked image path
+      expect(medalIcon).toHaveAttribute('src', 'MedalIcon.png');
       expect(medalIcon).toHaveClass('product-buy-container__icon');
       expect(medalBenefit).toHaveTextContent(componentProps.buy_and_delivery.benefits![2].text);
       expect(medalBenefit).toHaveTextContent(
@@ -286,13 +261,10 @@ describe('Feature: Product Buy and Delivery Details Display', () => {
     });
   });
 
-  // Scenario: Component renders with minimal data
   describe('Scenario: Component renders with minimal data', () => {
-    // Given: A ProductBuy component with minimal buy_and_delivery data
     const componentProps = minimalBuyAndDeliveryData;
 
     beforeEach(() => {
-      // When: The component is rendered
       render(<ProductBuy {...componentProps} />);
     });
 
@@ -309,7 +281,7 @@ describe('Feature: Product Buy and Delivery Details Display', () => {
         componentProps.buy_and_delivery.delivery.description
       );
 
-      expect(screen.queryByTestId('mock-CustomLink')).not.toBeInTheDocument(); // No CustomLink for calculate_shipping
+      expect(screen.queryByTestId('mock-CustomLink')).not.toBeInTheDocument();
     });
 
     it('And: the disponibility title should be rendered with CustomTitle', () => {
@@ -329,7 +301,7 @@ describe('Feature: Product Buy and Delivery Details Display', () => {
     });
 
     it('And: the seller text should be displayed', () => {
-      const sellerTextElement = screen.getAllByTestId('mock-CustomText')[2]; // Tercer CustomText
+      const sellerTextElement = screen.getAllByTestId('mock-CustomText')[2];
       expect(sellerTextElement).toBeInTheDocument();
       expect(sellerTextElement).toHaveTextContent(`Vendido por ${componentProps.seller}`);
     });

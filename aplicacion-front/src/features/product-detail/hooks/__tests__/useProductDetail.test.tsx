@@ -1,23 +1,13 @@
 import { renderHook, waitFor } from '@testing-library/react';
-import { useProductDetails } from '../useProductDetail'; // Ruta a tu custom hook
-import { fetchProductDetails } from '../../api/productApi'; // Ruta a tu función de API
-import { Product } from '../../types/product'; // Ruta a tu tipo Product
+import { useProductDetails } from '../useProductDetail';
+import { fetchProductDetails as mockFetchProductDetails } from '../../api/productApi';
+import { Product } from '../../types/product';
 
-// --- MOCKS ---
-
-// Mock para fetchProductDetails
 jest.mock('../../api/productApi', () => ({
-  fetchProductDetails: jest.fn(), // Mockeamos la función de la API
+  fetchProductDetails: jest.fn(),
 }));
 
-// Importamos el mock para poder limpiarlo en beforeEach
-import { fetchProductDetails as mockFetchProductDetails } from '../../api/productApi';
-
-// --- FIN DE MOCKS ---
-
-// Feature: Product Details Data Fetching
 describe('Feature: Product Details Data Fetching', () => {
-  // Datos de prueba para un producto
   const mockProduct: Product = {
     id: 'MLA123456789',
     title: 'Producto de Prueba',
@@ -58,17 +48,13 @@ describe('Feature: Product Details Data Fetching', () => {
   };
 
   beforeEach(() => {
-    // Limpia las llamadas al mock de la API antes de cada test
     mockFetchProductDetails.mockClear();
   });
 
-  // Scenario: Initial state and no product ID
   describe('Scenario: Initial state and no product ID', () => {
-    // Given: useProductDetails is called with an empty productId
     const productId = '';
 
     beforeEach(() => {
-      // When: The hook is rendered
       renderHook(() => useProductDetails(productId));
     });
 
@@ -88,12 +74,10 @@ describe('Feature: Product Details Data Fetching', () => {
     });
   });
 
-  // Scenario: Successful product fetch
   describe('Scenario: Successful product fetch', () => {
     const productId = 'valid-product-id';
 
     beforeEach(() => {
-      // Given: fetchProductDetails successfully returns product data
       mockFetchProductDetails.mockResolvedValue(mockProduct);
     });
 
@@ -123,13 +107,11 @@ describe('Feature: Product Details Data Fetching', () => {
     });
   });
 
-  // Scenario: Failed product fetch
   describe('Scenario: Failed product fetch', () => {
     const productId = 'invalid-product-id';
     const errorMessage = 'Error de red o producto no encontrado';
 
     beforeEach(() => {
-      // Given: fetchProductDetails throws an error
       mockFetchProductDetails.mockRejectedValue(new Error(errorMessage));
     });
 
@@ -159,7 +141,6 @@ describe('Feature: Product Details Data Fetching', () => {
     });
   });
 
-  // Scenario: Product ID changes
   describe('Scenario: Product ID changes', () => {
     const initialProductId = 'initial-id';
     const newProductId = 'new-id';
@@ -171,10 +152,9 @@ describe('Feature: Product Details Data Fetching', () => {
     const newProductData: Product = { ...mockProduct, id: newProductId, title: 'New Product' };
 
     beforeEach(() => {
-      // Given: fetchProductDetails successfully returns data for initial ID
       mockFetchProductDetails
-        .mockResolvedValueOnce(initialProductData) // Primera llamada
-        .mockResolvedValueOnce(newProductData); // Segunda llamada
+        .mockResolvedValueOnce(initialProductData)
+        .mockResolvedValueOnce(newProductData);
     });
 
     it('When: the productId is updated, Then: it should re-initiate loading and refetch data', async () => {
@@ -182,29 +162,24 @@ describe('Feature: Product Details Data Fetching', () => {
         initialProps: { id: initialProductId },
       });
 
-      // Initially loads the first product
       await waitFor(() => {
         expect(result.current.loading).toBe(false);
         expect(result.current.product).toEqual(initialProductData);
         expect(mockFetchProductDetails).toHaveBeenCalledWith(initialProductId);
       });
 
-      // Reset mock calls before rerendering with new ID
       mockFetchProductDetails.mockClear();
 
-      // When: the productId is updated
       rerender({ id: newProductId });
 
-      // Then: it should re-initiate loading
       await waitFor(() => {
         expect(result.current.loading).toBe(false);
       });
 
-      // And: it should refetch product details with the new ID
       await waitFor(() => {
         expect(result.current.loading).toBe(false);
         expect(result.current.product).toEqual(newProductData);
-        expect(mockFetchProductDetails).toHaveBeenCalledTimes(1); // Only one call for the new ID
+        expect(mockFetchProductDetails).toHaveBeenCalledTimes(1);
         expect(mockFetchProductDetails).toHaveBeenCalledWith(newProductId);
       });
     });
