@@ -22,24 +22,18 @@ When(/^I handle any cookie banner if it appears$/, async () => {
 });
 
 When(/^I apply the "([^"]*)" filter for the brand$/, async (brandName: string) => {
-    console.log(`STEP: Attempting to apply brand filter: ${brandName}`);
     await MercadoLibreSearchPage.applyBrandFilter(brandName);
-    console.log(`STEP: Brand filter "${brandName}" applied successfully.`);
 });
 
 When(/^I get the price of the first product in the list$/, async () => {
-    console.log('STEP: Getting price of the first product in the list...');
     expectedProductPrice = await MercadoLibreSearchPage.getFirstProductPrice();
-    console.log(`STEP: Expected product price from list: ${expectedProductPrice}`);
 });
 
 When(/^I click on the first product in the list$/, async () => {
-    
     await MercadoLibreSearchPage.clickFirstProduct();
 });
 
 Then(/^the product price on the detail page should match the price from the list$/, async () => {
     const actualProductPrice = await MercadoLibreProductDetailPage.getProductPrice();
-    
     expect(actualProductPrice).toEqual(expectedProductPrice);
 });
